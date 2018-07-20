@@ -1,0 +1,177 @@
+.slider-home {
+  position: relative;
+  @include media("<tablet") {
+    background-color: $bg;
+    padding: 0 20px 100px 20px;
+  }
+  &__wrap {
+    background-color: $bg;
+    padding: 180px 0 160px 0;
+    width: calc(75% - 47px);
+    @include media("<tablet") {
+      width: 100%;
+      padding: 50px 0 45px 0;
+    }
+    &__text {
+      margin-left: 76px;
+      width: 33%;
+      @include media("<tablet") {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 75px;
+      }
+      @include media("<phablet") {
+        padding: 0;
+      }
+      .small {
+        font-size: 30px;
+        line-height: 46px;
+        font-weight: 100;
+        color: $lightblue;
+        text-transform: uppercase;
+      }
+      .title {
+        font-family: $font_title;
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 1px;
+        color: $corporative;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+      .text {
+        font-size: 16px;
+        line-height: 26px;
+        color: $darkgrey;
+        margin-bottom: 15px;
+        p {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+  &__slider {
+    width: calc(75% - 175px);
+    height: 350px;
+    position: absolute;
+    right: 57px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    @include media("<desktop") {
+      height: 300px;
+    }
+    @include media("<tablet") {
+      width: 100%;
+      position: relative;
+      right: auto;
+      top: auto;
+      bottom: auto;
+    }
+    .swiper-container {
+      .swiper-wrapper {
+        .swiper-slide {
+          background-size: cover;
+          width: 100%;
+          height: 350px;
+          position: relative;
+          @include media("<desktop") {
+            height: 300px;
+          }
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba($black, 0.5);
+          }
+        }
+      }
+    }
+    &__content {
+      width: 180px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      .title {
+        font-family: $font_title;
+        font-size: 16px;
+        line-height: 23px;
+        letter-spacing: 0.5px;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .text {
+        font-size: 16px;
+        line-height: 25px;
+        color: $white;
+      }
+    }
+    &__navigation {
+      position: absolute;
+      right: 0;
+      top: -46px;
+      z-index: 1;
+      width: 84px;
+      @include media("<tablet") {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100px;
+        height: 50px;
+        float: right;
+      }
+      @include media("<phablet") {
+        float: none;
+        width: 100%;
+        height: 50px;
+      }
+      .icon {
+        font-size: 32px;
+        color: $corporative;
+      }
+      .swiper-button-prev {
+        position: static;
+        background-image: none;
+        width: 32px;
+        height: 22px;
+        float: left;
+        @include media("<tablet") {
+          margin-top: 28px;
+        }
+        &.swiper-button-disabled {
+          opacity: 1;
+          .icon {
+            color: $lightgrey;
+          }
+        }
+      }
+      .swiper-button-next {
+        position: static;
+        background-image: none;
+        width: 32px;
+        height: 22px;
+        float: right;
+        @include media("<tablet") {
+          margin-top: 28px;
+        }
+        &.swiper-button-disabled {
+          opacity: 1;
+          .icon {
+            color: $lightgrey;
+          }
+        }
+      }
+      &:after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+    }
+  }
+}

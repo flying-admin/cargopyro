@@ -1,0 +1,154 @@
+.news-slider {
+  margin-bottom: 110px;
+  position: relative;
+  &__wrap {
+    width: 75%;
+    padding: 70px 0 175px 0;
+    background-color: $corporative;
+    @include media("<tablet") {
+      width: 100%;
+      padding-bottom: 20px;
+    }
+    &__title {
+      font-family: $font_title;
+      font-size: 70px;
+      line-height: 80px;
+      color: $secondary;
+      text-transform: uppercase;
+      margin-bottom: 45px;
+      padding-left: 70px;
+      @include media("<phablet") {
+        padding-left: 20px;
+      }
+    }
+    &__text {
+      width: 50%;
+      padding: 0 100px 0 70px;
+      @include media("<tablet") {
+        width: 100%;
+        margin-bottom: 50px;
+      }
+      @include media("<phablet") {
+        padding: 0 20px 0 20px;
+      }
+      .title {
+        font-family: $font_title;
+        font-size: 30px;
+        line-height: 46px;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        max-width: 275px;
+      }
+      .date {
+        font-size: 13px;
+        font-weight: 900;
+        color: rgba($white, 0.4);
+        line-height: 26px;
+        margin-bottom: 16px;
+      }
+      .text {
+        p {
+          font-size: 16px;
+          color: rgba($white, 0.7);
+          line-height: 26px;
+          margin-bottom: 10px;
+        }
+        .link {
+          color: $white;
+          &:after {
+            background-color: $white;
+          }
+        }
+      }
+      
+    }
+    &__slider {
+      position: absolute;
+      width: 62%;
+      height: 400px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      @include media("<tablet") {
+        width: 100%;
+        position: relative;
+      }
+      .swiper-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            background-color: #ECECEC;
+            background-size: cover;
+            width: 100%;
+            height: 400px;
+            position: relative;
+            @include media("<desktop") {
+              // height: 300px;
+            }
+          }
+        }
+      }
+      &__navigation {
+        position: absolute;
+        right: 63px;
+        top: -46px;
+        z-index: 1;
+        width: 84px;
+        height: 46px;
+
+        @include media("<tablet") {
+          position: relative;
+          right: auto;
+          top: auto;
+          width: 100%;
+          height: 50px;
+          padding: 0 10px;
+        }
+        .icon {
+          font-size: 32px;
+          color: $corporative;
+        }
+        .swiper-button-prev {
+          margin-top: 0;
+          position: static;
+          background-image: none;
+          width: 32px;
+          height: 22px;
+          float: left;
+          @include media("<tablet") {
+            margin-top: 28px;
+          }
+          &.swiper-button-disabled {
+            opacity: 1;
+            .icon {
+              color: $lightgrey;
+            }
+          }
+        }
+        .swiper-button-next {
+          margin-top: 0;
+          position: static;
+          background-image: none;
+          width: 32px;
+          height: 22px;
+          float: right;
+          @include media("<tablet") {
+            margin-top: 28px;
+          }
+          &.swiper-button-disabled {
+            opacity: 1;
+            .icon {
+              color: $lightgrey;
+            }
+          }
+        }
+        &:after {
+          content: '';
+          display: table;
+          clear: both;
+        }
+      }
+    }
+  }
+}

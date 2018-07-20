@@ -1,0 +1,9 @@
+{
+    "name": "flyingpigs/cargo-theme",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Flyingpigs\\CargoTheme\\": "src/"
+        }
+    }
+}

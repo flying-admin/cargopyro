@@ -1,0 +1,50 @@
+// @font-face {
+//  font-family: 'Fontname';
+//  src: font-url('Fontname-variant.eot');
+//   src: font-url('Fontname-variant.eot?#iefix') format('embedded-opentype'),
+//        font-url('Fontname-variant.woff2') format('woff2'),
+//        font-url('Fontname-variant.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+// }
+
+@font-face {
+  font-family: 'Anton';
+  src: font-url('anton-regular.eot');
+  src: font-url('anton-regular.eot?#iefix') format('embedded-opentype'),
+       font-url('anton-regular.woff2') format('woff2'),
+       font-url('anton-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: font-url('lato-regular.eot');
+  src: font-url('lato-regular.eot?#iefix') format('embedded-opentype'),
+       font-url('lato-regular.woff2') format('woff2'),
+       font-url('lato-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: font-url('lato-light.eot');
+  src: font-url('lato-light.eot?#iefix') format('embedded-opentype'),
+       font-url('lato-light.woff2') format('woff2'),
+       font-url('lato-light.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: font-url('lato-black.eot');
+  src: font-url('lato-black.eot?#iefix') format('embedded-opentype'),
+       font-url('lato-black.woff2') format('woff2'),
+       font-url('lato-black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
+

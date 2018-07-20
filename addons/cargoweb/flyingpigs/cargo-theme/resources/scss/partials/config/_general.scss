@@ -1,0 +1,123 @@
+body,
+input,
+textarea,
+button {
+  font-family: $font_default;
+  font-size: 14px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.body-wrapper {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1600px;
+  margin: 0px auto;
+  padding: 100px 0 0 0;
+  @include media("<phablet") {
+    padding: 71px 0 0 0;
+  }
+}
+
+.content__wrapper {
+  display: block;
+  position: relative; 
+  // max-width: 1200px;
+  margin: 0px auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  &--wide {
+    width: 100% !important;
+  }
+}
+
+.link {
+  display: inline-block;
+  color: $corporative;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  position: relative;
+  text-decoration: none;
+  &:after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: $corporative;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: all 0.5s;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+/* ========== HELPERS ========== */
+
+.content-align-left {
+  text-align: left;
+}
+
+.content-align-right {
+  text-align: right;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+// Desktop
+.hide-on-desktop,
+.responsive-only,
+.tablet-only,
+.mobile-only {
+  display: none !important;
+}
+
+.desktop-only,
+.hide-on-responsive,
+.hide-on-tablet,
+.hide-on-mobile {
+  display: inherit;
+}
+
+// Tablet
+@include media("<tablet") {
+  .responsive-only,
+  .tablet-only {
+    display: inherit !important;
+  }
+  .desktop-only,
+  .hide-on-responsive,
+  .hide-on-tablet {
+    display: none !important;
+  }
+}
+
+// Mobile
+@include media("<phablet") {
+  .responsive-only,
+  .mobile-only {
+    display: inherit !important;
+  }
+  .desktop-only,
+  .hide-on-responsive,
+  .hide-on-mobile {
+    display: none !important;
+  }
+}

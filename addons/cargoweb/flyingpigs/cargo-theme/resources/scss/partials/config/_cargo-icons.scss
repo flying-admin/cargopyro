@@ -1,0 +1,146 @@
+//
+// Icon Font: cargo-icons
+//
+
+@font-face {
+  font-family: "cargo-icons";
+  src: url("./../fonts/cargo-icons.eot");
+  src: url("./../fonts/cargo-icons.eot?#iefix") format("embedded-opentype"),
+       url("./../fonts/cargo-icons.woff2") format("woff2"),
+       url("./../fonts/cargo-icons.woff") format("woff"),
+       url("./../fonts/cargo-icons.ttf") format("truetype"),
+       url("./../fonts/cargo-icons.svg#cargo-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "cargo-icons";
+    src: url("./../fonts/cargo-icons.svg#cargo-icons") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-angle-down:before,
+.icon-angle-left:before,
+.icon-angle-right:before,
+.icon-angle-up:before,
+.icon-arrow-down:before,
+.icon-arrow-left:before,
+.icon-arrow-right:before,
+.icon-check:before,
+.icon-close:before,
+.icon-consultancy:before,
+.icon-cross-trade:before,
+.icon-customs:before,
+.icon-delivery-truck:before,
+.icon-download:before,
+.icon-facebook:before,
+.icon-fax:before,
+.icon-folder-safe:before,
+.icon-gplus:before,
+.icon-handshake:before,
+.icon-idea:before,
+.icon-location:before,
+.icon-lock:before,
+.icon-lock-bullet:before,
+.icon-mail:before,
+.icon-package-hand:before,
+.icon-phone:before,
+.icon-plane:before,
+.icon-qr-code:before,
+.icon-route:before,
+.icon-shield:before,
+.icon-ship:before,
+.icon-truck:before,
+.icon-twitter:before,
+.icon-warehouses:before,
+.icon-weight:before {
+  display: inline-block;
+  font-family: "cargo-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-angle-down:before { content: "\f11f"; }
+.icon-angle-left:before { content: "\f100"; }
+.icon-angle-right:before { content: "\f101"; }
+.icon-angle-up:before { content: "\f120"; }
+.icon-arrow-down:before { content: "\f102"; }
+.icon-arrow-left:before { content: "\f103"; }
+.icon-arrow-right:before { content: "\f104"; }
+.icon-check:before { content: "\f105"; }
+.icon-close:before { content: "\f11e"; }
+.icon-consultancy:before { content: "\f122"; }
+.icon-cross-trade:before { content: "\f106"; }
+.icon-customs:before { content: "\f107"; }
+.icon-delivery-truck:before { content: "\f108"; }
+.icon-download:before { content: "\f109"; }
+.icon-facebook:before { content: "\f10a"; }
+.icon-fax:before { content: "\f10b"; }
+.icon-folder-safe:before { content: "\f10c"; }
+.icon-gplus:before { content: "\f10d"; }
+.icon-handshake:before { content: "\f10e"; }
+.icon-idea:before { content: "\f10f"; }
+.icon-location:before { content: "\f110"; }
+.icon-lock:before { content: "\f111"; }
+.icon-lock-bullet:before { content: "\f112"; }
+.icon-mail:before { content: "\f113"; }
+.icon-package-hand:before { content: "\f114"; }
+.icon-phone:before { content: "\f115"; }
+.icon-plane:before { content: "\f116"; }
+.icon-qr-code:before { content: "\f117"; }
+.icon-route:before { content: "\f118"; }
+.icon-shield:before { content: "\f119"; }
+.icon-ship:before { content: "\f11a"; }
+.icon-truck:before { content: "\f121"; }
+.icon-twitter:before { content: "\f11b"; }
+.icon-warehouses:before { content: "\f11c"; }
+.icon-weight:before { content: "\f11d"; }
+
+$font-cargo-icons-angle-down: "\f11f";
+$font-cargo-icons-angle-left: "\f100";
+$font-cargo-icons-angle-right: "\f101";
+$font-cargo-icons-angle-up: "\f120";
+$font-cargo-icons-arrow-down: "\f102";
+$font-cargo-icons-arrow-left: "\f103";
+$font-cargo-icons-arrow-right: "\f104";
+$font-cargo-icons-check: "\f105";
+$font-cargo-icons-close: "\f11e";
+$font-cargo-icons-consultancy: "\f122";
+$font-cargo-icons-cross-trade: "\f106";
+$font-cargo-icons-customs: "\f107";
+$font-cargo-icons-delivery-truck: "\f108";
+$font-cargo-icons-download: "\f109";
+$font-cargo-icons-facebook: "\f10a";
+$font-cargo-icons-fax: "\f10b";
+$font-cargo-icons-folder-safe: "\f10c";
+$font-cargo-icons-gplus: "\f10d";
+$font-cargo-icons-handshake: "\f10e";
+$font-cargo-icons-idea: "\f10f";
+$font-cargo-icons-location: "\f110";
+$font-cargo-icons-lock: "\f111";
+$font-cargo-icons-lock-bullet: "\f112";
+$font-cargo-icons-mail: "\f113";
+$font-cargo-icons-package-hand: "\f114";
+$font-cargo-icons-phone: "\f115";
+$font-cargo-icons-plane: "\f116";
+$font-cargo-icons-qr-code: "\f117";
+$font-cargo-icons-route: "\f118";
+$font-cargo-icons-shield: "\f119";
+$font-cargo-icons-ship: "\f11a";
+$font-cargo-icons-truck: "\f121";
+$font-cargo-icons-twitter: "\f11b";
+$font-cargo-icons-warehouses: "\f11c";
+$font-cargo-icons-weight: "\f11d";

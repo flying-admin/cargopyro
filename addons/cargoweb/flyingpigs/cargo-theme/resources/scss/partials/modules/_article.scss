@@ -1,0 +1,137 @@
+.article {
+  position: relative;
+  width: 100%;
+  padding: 100px 175px 130px 175px;
+  @include media("<desktop") {
+    padding: 100px 20px 130px 20px;
+  }
+  &__back {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 900;
+    color: $corporative;
+    @include media("<phablet") {
+      right: 20px;
+    }
+    .icon {
+      font-size: 11px;
+      margin-right: 10px;
+      position: relative;
+      top: 2px;
+    }
+  }
+  &__title {
+    font-family: $font_title;
+    font-size: 50px;
+    line-height: 55px;
+    color: $secondary;
+    margin-bottom: 50px;
+    @include media("<phablet") {
+      font-size: 33px;
+      line-height: 47px;
+    }
+  }
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    @include media("<tablet") {
+      display: block;
+    }
+    &__image {
+      width: calc((100% - 55px) / 2);
+      @include media("<tablet") {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+    &__text {
+      width: calc((100% - 55px) / 2);
+      font-size: 33px;
+      line-height: 47px;
+      color: $secondary;
+      font-style: italic;
+      @include media("<tablet") {
+        width: 100%;
+      }
+      @include media("<phablet") {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+    &.full-width {
+      display: block;
+      .article__image__image {
+        width: 100%;
+      }
+    }
+  }
+  &__date {
+    font-size: 14px;
+    line-height: 26px;
+    color: $lightgrey;
+    margin-bottom: 16px;
+  }
+  &__text {
+    margin-bottom: 70px;
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      color: $darkgrey;
+      margin-bottom: 10px;
+    }
+  }
+  &__social {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li {
+        margin: 0 5px;
+        a {
+          text-decoration: none;
+        }
+        &:not(.share-text) {
+          width: 46px;
+          height: 46px;
+          border-radius: 23px;
+          background-color: $inputgrey;
+          text-align: center;
+        }
+        &.share-text {
+          span {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 900;
+            line-height: 26px;
+            color: $black;
+            padding-right: 20px;
+          }
+        }
+        .icon {
+          color: $primary;
+          position: relative;          
+          &.icon-facebook {
+            font-size: 16px;
+            top: 13px;
+            left: 3px;
+          }
+          &.icon-twitter {
+            font-size: 18px;
+            top: 14px;
+          }
+          &.icon-gplus {
+            font-size: 25px;
+            top: 13px;
+          }
+        }
+      }
+    }
+  }
+}

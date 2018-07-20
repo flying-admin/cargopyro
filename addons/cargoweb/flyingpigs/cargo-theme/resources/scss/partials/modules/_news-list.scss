@@ -1,0 +1,125 @@
+.news-list {
+  width: 100%;
+  &__wrapp {
+    max-width: 1040px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .article-preview {
+    width: calc( (100% - 136px) / 3);
+    @include media("<tablet") {
+      width: calc( (100% - 50px) / 2);
+    }
+    @include media("<phablet") {
+      width: 100%;
+    }
+  }
+  &--blue {
+    background-color: $white;
+    .article-preview {
+      .article-preview__content {
+        .date {
+          color: $lightgrey;
+        }
+        .title {
+          color: $corporative;
+        }
+        .text {
+          p {
+            color: $darkgrey;
+          }
+        }
+        .link {
+          color: $primary;
+          &:after {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+  &--white {
+    background-color: $corporative;
+    padding: 130px 0 80px 0;
+    .article-preview {
+      .article-preview__content {
+        .date {
+          color: rgba($white, 0.4);
+        }
+        .title {
+          color: $white;
+        }
+        .text {
+          p {
+            color: rgba($white, 0.7);
+          }
+        }
+        .link {
+          color: $white;
+          &:after {
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.paginator {
+  width: 100%;
+  padding: 10px 0 120px 10px;
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    li {
+      font-size: 20px;
+      &.disabled {
+        a,
+        span {
+          color: rgba($black, 0.2);
+          cursor: default;
+        }
+      }
+      &.prev {
+        font-size: 16px;
+        line-height: 32px;
+        a {
+          text-decoration: none;
+          color: $primary;
+        }
+      }
+      &.next {
+        font-size: 16px;
+        line-height: 32px;
+        a {
+          text-decoration: none;
+          color: $primary;
+        }
+      }
+      &.page {
+        font-family: $font_title;
+        a {
+          color: $primary;
+          display: block;
+          padding: 0 10px;
+          text-decoration: none;
+        }
+        span {
+          color: rgba($black, 0.2);
+        }
+        &.actual {
+          span {
+            display: block;
+            padding: 0 10px;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}

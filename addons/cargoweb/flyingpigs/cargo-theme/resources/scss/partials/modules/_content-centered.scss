@@ -1,0 +1,186 @@
+.content-centered {
+  text-align: center;
+  &__text {
+    @include media("<tablet") {
+      width: 100%;
+    }
+    &__title {
+      width: 50%;
+      margin: 0 auto;
+      font-family: $font_title;
+      font-size: 30px;
+      line-height: 40px;
+      letter-spacing: 1px;
+      color: $corporative;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 36px;
+      @include media("<tablet") {
+        width: 70%;
+      }
+      @include media("<phablet") {
+        width: 100%;
+        padding: 0 20px;
+      }
+    }
+    &__content {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+      @include media("<tablet") {
+        width: 70%;
+      }
+      @include media("<phablet") {
+        width: 100%;
+        padding: 0 20px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        color: $darkgrey;
+        padding-bottom: 10px;
+      }
+      p {
+        &.lead {
+          font-weight: 900;
+          color: $black;
+          padding-bottom: 15px;
+        }
+      }
+      .checklist {
+        > li {
+          font-size: 16px;
+          line-height: 26px;
+          color: $darkgrey;
+          padding-bottom: 10px;
+          padding-left: 33px;
+          position: relative;
+          ul {
+            padding-top: 20px;
+          }
+          &:before {
+            @extend .icon-check;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            font-size: 18px;
+            color: $primary;
+            margin-right: 15px;
+          }
+        }
+      }
+      .bulletlist {
+        li {
+          font-size: 16px;
+          line-height: 26px;
+          color: $darkgrey;
+          padding-bottom: 10px;
+          padding-left: 20px;
+          position: relative;
+          &:before {
+            content: '';
+            display: block;
+            padding: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $darkgrey;
+            position: absolute;
+            left: 0;
+            top: 12px;
+          }
+        }
+      }
+      .content-block {
+        margin-bottom: 15px;
+      }
+      .company-logos {
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include media("<tablet") {
+          flex-wrap: wrap;
+        }
+        @include media("<phablet") {
+          display: block;
+        }
+        .company-logo {
+          width: auto;
+          margin-right: 60px;
+          @include media("<tablet") {
+            margin-right: 20px;
+          }
+          @include media("<phablet") {
+            display: block;
+            margin: 0 auto 20px auto;
+          }
+          &:first-child,
+          &:last-child {
+            margin-right: 0;
+            @include media("<phablet") {
+              margin: 0 auto 20px auto;
+            }
+          }
+          &.ateia {
+            width: 170px;
+          }
+          &.feteia {
+            width: 199px;
+          }
+          &.aeo {
+            width: 99px;
+          }
+          &.iata {
+            width: 100px;
+          }
+          &.iso {
+            width: 86px;
+          }
+        }
+      }
+      .company-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 660px;
+        margin: 0 auto;
+        @include media("<tablet") {
+          flex-wrap: wrap;
+        }
+        @include media("<phablet") {
+          width: 100%;
+        }
+        .btn {
+          width: 310px;
+          @include media("<phablet") {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .lock-bullet {
+        width: 18px;
+        display: inline-block;
+        margin-right: 15px;
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+  &--company {
+    margin-bottom: 100px;
+    .content-centered__text__content {
+      width: 100%;
+      p {
+        width: 50%;
+        margin: 0 auto;
+        @include media("<phablet") {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

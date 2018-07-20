@@ -1,0 +1,64 @@
+.hero {
+  height: calc(100vh - 100px);
+  min-height: 600px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  @include media("<phablet") {
+    height: calc(100vh - 71px);
+    min-height: 300px;
+    margin-bottom: 60px;
+  }
+  &__content {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    &__text {
+      font-size: 30px;
+      font-weight: 100;
+      line-height: 80px;
+      color: $white;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      @include media("<phablet") {
+        font-size: 25px;
+        line-height: 40px;
+      }
+    }
+    &__title {
+      font-family: $font_title;
+      font-size: 70px;
+      line-height: 80px;
+      color: $white;
+      text-align: center;
+      text-transform: uppercase;
+      @include media("<phablet") {
+        font-size: 40px;
+        line-height: 55px;
+      }
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: rgba($black, 0.4);
+  }
+  &--company {
+    .hero__content {
+      max-width: 600px;
+    }
+  }
+}

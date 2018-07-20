@@ -1,0 +1,60 @@
+.home-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 110px 55px;
+  @include media("<desktop") {
+    padding: 120px 45px 110px 45px;
+  }
+  @include media("<tablet") {
+    display: block;
+    padding: 40px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    max-width: 295px;
+    text-align: center;
+    padding: 0 10px;
+    @include media("<tablet") {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
+    .icon {
+      height: 85px;
+      color: $primary;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      &.icon-package-hand {
+        font-size: 62px;
+      }
+      &.icon-route {
+        font-size: 70px;
+      }
+      &.icon-folder-safe {
+        font-size: 70px;
+      }
+      &.icon-handshake {
+        font-size: 85px;
+      }
+    }
+    .title {
+      font-family: $font_title;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $black;
+      margin-bottom: 15px;
+      margin-top: auto;
+    }
+    .text {
+      font-size: 16px;
+      line-height: 26px;
+      color: $darkgrey;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+//Grid
+$flexboxgrid-grid-columns: 12;
+$flexboxgrid-gutter-width: 30px;
+$flexboxgrid-outer-margin: 30px;
+$flexboxgrid-breakpoints:
+  xxs 0px 100%,
+  xs 480px 100%,
+  sm 768px 100%,
+  md 991px 990px,
+  lg 1200px 1120px,
+  xl 1440px 1220px;
+
+//Colors
+$white: #fff;
+$black: #2E2E2F;
+$blackish: #000;
+$primary: #155B9E;
+$secondary: #012140;
+$corporative: #083D6F;
+$lightblue: #699BCB;
+$bg: #F2F3F5;
+$error: #000;
+$lightgrey: #AFAFAF;
+$darkgrey: #6D6D6D;
+$inputgrey: #F1F1F1;
+$labelgrey: #9B9B9B;
+$buttongrey: #D4D4D4;
+
+
+//Fonts
+$font_default: "Lato", sans-serif;
+$font_title: "Anton", sans-serif;

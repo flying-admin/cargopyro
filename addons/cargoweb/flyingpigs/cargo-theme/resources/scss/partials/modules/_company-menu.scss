@@ -1,0 +1,54 @@
+.company-menu {
+  position: relative;
+  height: 88px;
+  margin-bottom: 60px;
+  @include media("<phablet") {
+    display: none;
+  }
+  &__wrapp {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    padding: 35px 25px;
+    position: relative;
+    @include media("<tablet") {
+      padding: 35px 15px;
+    }
+    a {
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 900;
+      color: $primary;
+      line-height: 18px;
+      text-decoration: none;
+    }
+    &.active {
+      &:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: auto;
+        position: absolute;
+        bottom: 10px;
+        left: 25px;
+        right: 25px;
+        background-color: $primary;
+        @include media("<tablet") {
+          left: 15px;
+          right: 15px;
+        }
+      }
+    }
+  }
+  &--sticky {
+    .company-menu__wrapp {
+      position: fixed;
+      top: 100px;
+      width: 100%;
+      left: 0;
+      background-color: $white;
+      z-index: 99;
+    }
+  }
+}

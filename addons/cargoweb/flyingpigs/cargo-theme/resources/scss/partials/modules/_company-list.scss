@@ -1,0 +1,64 @@
+.company-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 55px 110px 55px;
+  width: calc(100% / 12 * 8);
+  margin: 0 auto;
+  @include media("<desktop") {
+    padding: 90px 45px 110px 45px;
+  }
+  @include media("<tablet") {
+    display: block;
+    padding: 40px;
+  }
+  @include media("<phablet") {
+    width: 100%;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 0 25px;
+    @include media("<tablet") {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
+    @include media("<phablet") {
+      width: 100%;
+      padding: 0;
+    }
+    .icon {
+      height: 85px;
+      color: $primary;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      &.icon-idea {
+        font-size: 69px;
+      }
+      &.icon-shield {
+        font-size: 75px;
+      }
+      &.icon-handshake {
+        font-size: 85px;
+      }
+    }
+    .title {
+      font-family: $font_title;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $corporative;
+      margin-bottom: 15px;
+    }
+    .text {
+      font-size: 16px;
+      line-height: 26px;
+      color: $darkgrey;
+    }
+  }
+}

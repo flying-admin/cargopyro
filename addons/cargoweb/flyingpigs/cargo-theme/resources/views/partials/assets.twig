@@ -1,0 +1,19 @@
+{# Theme Scripts #}
+{{ asset_add("app.js", "theme::js/dependencies/*") }}
+{{ asset_add("app.js", "theme::js/plugins/*") }}
+{{ asset_add("app.js", "theme::js/custom/*") }}
+{{ asset_add("app.js", "theme::js/all.js") }}
+
+{{ asset_script("app.js", ["min", "watch@theme::js"]) }}
+
+{# Include Scripts Loaded From Outside #}
+{% for script in asset_scripts("scripts.js") %}
+    {{ script|raw }}
+{% endfor %}
+
+{# Include Styles Loaded From Outside #}
+{% for style in asset_styles("styles.css") %}
+    {{ style|raw }}
+{% endfor %}
+
+{{ template.includes.render('scripts')|raw }}

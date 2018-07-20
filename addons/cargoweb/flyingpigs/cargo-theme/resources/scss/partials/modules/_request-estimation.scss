@@ -1,0 +1,124 @@
+.request-estimation {
+  position: relative;
+  &__wrap {
+    position: relative;
+    height: 720px;
+    width: calc(75% - 47px);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include media("<tablet") {
+      display: block;
+      width: 100%;
+      padding: 50px 0 45px 0;
+      height: auto;
+    }
+    @include media("<phablet") {
+      padding: 60px 30px 140px 30px;
+      background-size: cover;
+    }
+    &__text {
+      margin-left: 76px;
+      width: 33%;
+      position: relative;
+      z-index: 1;
+      @include media("<tablet") {
+        width: 100%;
+        margin-left: 0;
+        padding: 60px 75px 180px 75px;
+      }
+      @include media("<phablet") {
+        padding: 0;
+      }
+      .small {
+        font-size: 30px;
+        line-height: 46px;
+        font-weight: 100;
+        color: $white;
+        text-transform: uppercase;
+      }
+      .title {
+        font-family: $font_title;
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 1px;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+      .text {
+        font-size: 16px;
+        line-height: 26px;
+        color: $white;
+        margin-bottom: 15px;
+        p {
+          padding-bottom: 10px;
+        }
+      }
+      .link {
+        color: $white;
+        &:after {
+          background-color: $white;
+        }
+      }
+    }
+    &__form {
+      background-color: $white;
+      width: calc(75% / 2);
+      padding: 50px 70px 70px 70px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      z-index: 1;
+      box-shadow: 0 3px 36px 5px rgba(0,0,0,0.22);
+      @include media("<desktop") {
+        padding: 40px;
+      }
+      @include media("<tablet") {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin: -80px auto 0 auto;
+        width: 520px;
+        max-width: 100%;
+        padding: 50px 70px 70px 70px;
+      }
+      @include media("<phablet") {
+        max-width: calc(100% - 40px);
+        padding: 30px 27px 40px 27px;
+      }
+      .small {
+        font-size: 30px;
+        line-height: 46px;
+        font-weight: 100;
+        color: $lightblue;
+        text-transform: uppercase;
+      }
+      .title {
+        font-family: $font_title;
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 1px;
+        color: $corporative;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+      }
+      .btn {
+        margin-top: 20px;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba($primary, 0.64);
+    }
+  }
+}
