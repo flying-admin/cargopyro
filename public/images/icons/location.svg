@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="13px" height="19px" viewBox="0 0 13 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="visual_ent" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01_Home_01destacado_tierra" transform="translate(-275.000000, -12.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="001-placeholder-black-shape-for-localization-on-maps" transform="translate(275.000000, 12.000000)">
+                <path d="M6.5,0 C2.1502,0 0,3.021 0,6.74759091 C0,10.4741818 6.5,19 6.5,19 C6.5,19 13,10.4741818 13,6.74759091 C13,3.021 10.8498,0 6.5,0 Z M6.5,9.06818182 C4.58553333,9.06818182 3.03333333,7.52140909 3.03333333,5.61363636 C3.03333333,3.70586364 4.58553333,2.15909091 6.5,2.15909091 C8.41446667,2.15909091 9.96666667,3.70586364 9.96666667,5.61363636 C9.96666667,7.52140909 8.41446667,9.06818182 6.5,9.06818182 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

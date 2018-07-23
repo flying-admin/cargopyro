@@ -13,17 +13,23 @@
 <html>
   <head>
       {% include "theme::partials/metadata" %}
+      {% include "theme::partials/assets" %}
   </head>
   <body>
-  {% include "theme::partials/header" %}
+  <div class="body-wrapper">
+    <h1>{{ trans('theme::addon.description') }}</h1>
+    <h1> {{ app.locale }} </h1>
+    <h1> {{ url.current_url }} </h1>
+      {% include "theme::partials/header" %}
 
-  <main id="main">
-    {% include "theme::partials/messages" %}
-    {% block content %}{% endblock %}
-  </main>
+    <div class="content__wrapper">
+      {% include "theme::partials/messages" %}
+      {% block content %}{% endblock %}
+    </div>
 
-  {% include "theme::partials/footer" %}
-  {% include "theme::partials/assets" %}
+      {% include "theme::partials/footer" %}
+
+    </div>
   </body>
 </html>
 {% endhtmlcompress %}

@@ -1,4 +1,139 @@
 <header class="header">
-  Header
-  <a href="{{ route('contacto') }}"> IR A CONTACTO</a>
+  <div class="menu-mobile">
+    <ul>
+      <li>
+        <button class="btn-close">
+          <span class="icon icon-close"></span>
+        </button>
+      </li>
+      <li class="">
+        <div class="dropdown">
+          <a href="{{ url('/servicios') }}" class="btn-dropdown"> Servicios
+            <span class="icon icon-angle-down">
+          </a>
+          <div class="dropdown-list">
+            <ul>
+              <li>
+                <a href="{{ url('/servicios') }}/#ground">Terrestre</a>
+              </li>
+              <li>
+                <a href="{{ url('/servicios') }}/#marine">Marítimo</a>
+              </li>
+              <li>
+                <a href="{{ url('/servicios') }}/#aerial">Aéreo</a>
+              </li>
+              <li>
+                <a href="{{ url('/servicios') }}/#cross-trade">Cross Trade</a>
+              </li>
+              <li>
+                <a href="{{ url('/servicios') }}/#projects">Proyectos</a>
+              </li>
+              <li>
+                <a href="{{ url('/servicios') }}/#customs">Aduanas</a>
+              </li>
+              <li>
+                <a href="{{ url('/servicios') }}/#warehouses">Almacenes</a>
+              </li>
+              <li>
+                <a href="{{ url('/servicios') }}/#insurance">Seguros</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="">
+        <div class="dropdown">
+          <a href="{{ url('/empresa') }}" class="btn-dropdown"> Empresa
+            <span class="icon icon-angle-down">
+          </a>
+          <div class="dropdown-list">
+            <ul>
+              <li>
+                <a href="{{ url('/empresa') }}#history">Historia</a>
+              </li>
+              <li>
+                <a href="{{ url('/empresa') }}#philosophy">Nuestra filosofía</a>
+              </li>
+              <li>
+                <a href="{{ url('/empresa') }}#comany-pol">Política de empresa</a>
+              </li>
+              <li>
+                <a href="{{ url('/empresa') }}#qa">Calidad</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="">
+        <a href="../news/">Noticias</a>
+      </li>
+      <li class="">
+        <a href="../contact/">Contacto</a>
+      </li>
+      <li>
+        <a href="#budget-form" class="btn btn--primary">Pídenos presupuesto</a>
+      </li>
+    </ul>
+  </div>
+
+  <a href="{{ url('/') }}" class="header__logo">
+      {# <img src="images/content/logo-web.svg" class="header__logo__logo" alt="Logo web" /> #}
+    <img src="{{ image_url('theme::images/content/logo-web.svg') }}" class="header__logo__logo" alt="Logo web" />
+  </a>
+  <div class="header__navs">
+    <div class="header__navs__info">
+      <ul class="header__navs__info__left">
+        <li>
+          <a href="#" class="localiza-oficina" data-scroll="map">
+            <!-- falta enlace -->
+            <span class="icon icon-location"></span>
+            <span class="text">Localiza tu oficina</span>
+          </a>
+        </li>
+        <li class="phone-number">
+          <a href="tel:+34 91 434 1820">
+            <span class="icon icon-phone"></span>
+            <span class="text">(+34) 914 341 820</span>
+          </a>
+        </li>
+        <li class="mail-address">
+          <a href="mailto:infomad@cargoservicesgroup.com">
+            <span class="icon icon-mail"></span>
+            <span class="text">infomad@cargoservicesgroup.com</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="header__navs__info__right hide-on-mobile">
+        <li>
+          <a href="#" class="{{ (app.locale  ==  'es') ?  'active' : '' }}">ES</a>
+        </li>
+        <li>
+          <a href="#" class="{{ (app.locale  ==  'en') ?  'active' : '' }}">EN</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="header__navs__menu">
+      <ul>
+        <li class="">
+          <a href="{{ url('/servicios') }}">Servicios</a>
+        </li>
+        <li class="">
+          <a href="{{ url('/servicios') }}">Empresa</a>
+        </li>
+        <li class="">
+          <a href="../news/">Noticias</a>
+        </li>
+        <li class="">
+          <a href="../contact/">Contacto</a>
+        </li>
+      </ul>
+      <button class="btn-menu-mobile">
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <a href="#budget-form" class="btn btn--primary btn-budget">Pídenos presupuesto</a>
+
 </header>

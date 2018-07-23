@@ -80,9 +80,11 @@ locations = [
 
 
 function initMap(){
+    var host = window.location.protocol + "//" +  window.location.host ;
+
 
   markerImg = {
-      url: './../assets/images/content/marker.png',
+      url: host + '/images/content/marker.png',
       size: new google.maps.Size(36, 36),
       origin: new google.maps.Point(0,0),
       anchor: new google.maps.Point(18, 18),
@@ -94,7 +96,7 @@ function initMap(){
       type: 'poly'
   };
 
-  clusterImg = './../assets/images/content/cluster';
+  clusterImg = host + '/images/content/cluster';
   clusterExt = 'svg';
 
   initContactMap();

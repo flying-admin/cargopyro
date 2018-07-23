@@ -3,5 +3,5 @@
 return [
     'title'       => 'Cargo',
     'name'        => 'Cargo Theme',
-    'description' => ''
+    'description' => 'hola hola'
 ];
