@@ -17,12 +17,11 @@
   </head>
   <body>
   <div class="body-wrapper">
-    <h1>{{ trans('theme::addon.description') }}</h1>
-    <h1> {{ app.locale }} </h1>
-    <h1> {{ url.current_url }} </h1>
+
       {% include "theme::partials/header" %}
 
     <div class="content__wrapper">
+
       {% include "theme::partials/messages" %}
       {% block content %}{% endblock %}
     </div>

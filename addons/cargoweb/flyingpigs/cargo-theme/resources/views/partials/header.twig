@@ -8,34 +8,34 @@
       </li>
       <li class="">
         <div class="dropdown">
-          <a href="{{ url('/servicios') }}" class="btn-dropdown"> Servicios
+          <a href="{{  ( app.locale  ==  'en')?  url_to( 'services' ) :  url_to( 'servicios' )   }}" class="btn-dropdown"> Servicios
             <span class="icon icon-angle-down">
           </a>
           <div class="dropdown-list">
             <ul>
               <li>
-                <a href="{{ url('/servicios') }}/#ground">Terrestre</a>
+                <a href="{{ ( app.locale  ==  'en')?  url_to( 'services' ) :  url_to( 'servicios' )   }}/#ground">Terrestre</a>
               </li>
               <li>
-                <a href="{{ url('/servicios') }}/#marine">Marítimo</a>
+                <a href="{{ ( app.locale  ==  'en')?  url_to( 'services' ) :  url_to( 'servicios' )   }}/#marine">Marítimo</a>
               </li>
               <li>
-                <a href="{{ url('/servicios') }}/#aerial">Aéreo</a>
+                <a href="{{ ( app.locale  ==  'en')?  url_to( 'services' ) :  url_to( 'servicios' )   }}/#aerial">Aéreo</a>
               </li>
               <li>
-                <a href="{{ url('/servicios') }}/#cross-trade">Cross Trade</a>
+                <a href="{{ ( app.locale  ==  'en')?  url_to( 'services' ) :  url_to( 'servicios' )   }}/#cross-trade">Cross Trade</a>
               </li>
               <li>
-                <a href="{{ url('/servicios') }}/#projects">Proyectos</a>
+                <a href="{{ ( app.locale  ==  'en')?  url_to( 'services' ) :  url_to( 'servicios' )   }}/#projects">Proyectos</a>
               </li>
               <li>
-                <a href="{{ url('/servicios') }}/#customs">Aduanas</a>
+                <a href="{{ ( app.locale  ==  'en')?  url_to( 'services' ) :  url_to( 'servicios' )   }}/#customs">Aduanas</a>
               </li>
               <li>
-                <a href="{{ url('/servicios') }}/#warehouses">Almacenes</a>
+                <a href="{{ ( app.locale  ==  'en')?  url_to( 'services' ) :  url_to( 'servicios' )   }}/#warehouses">Almacenes</a>
               </li>
               <li>
-                <a href="{{ url('/servicios') }}/#insurance">Seguros</a>
+                <a href="{{ ( app.locale  ==  'en')?  url_to( 'services' ) :  url_to( 'servicios' )   }}/#insurance">Seguros</a>
               </li>
             </ul>
           </div>
@@ -43,22 +43,22 @@
       </li>
       <li class="">
         <div class="dropdown">
-          <a href="{{ url('/empresa') }}" class="btn-dropdown"> Empresa
+          <a href="{{  ( app.locale  ==  'en')?  url_to( 'company' ) :  url_to( 'empresa' )   }}" class="btn-dropdown"> Empresa
             <span class="icon icon-angle-down">
           </a>
           <div class="dropdown-list">
             <ul>
               <li>
-                <a href="{{ url('/empresa') }}#history">Historia</a>
+                <a href="{{  ( app.locale  ==  'en')?  url_to( 'company' ) :  url_to( 'empresa' )   }}#history">Historia</a>
               </li>
               <li>
-                <a href="{{ url('/empresa') }}#philosophy">Nuestra filosofía</a>
+                <a href="{{ ( app.locale  ==  'en')?  url_to( 'company' ) :  url_to( 'empresa' )   }}#philosophy">Nuestra filosofía</a>
               </li>
               <li>
-                <a href="{{ url('/empresa') }}#comany-pol">Política de empresa</a>
+                <a href="{{  ( app.locale  ==  'en')?  url_to( 'company' ) :  url_to( 'empresa' )   }}#comany-pol">Política de empresa</a>
               </li>
               <li>
-                <a href="{{ url('/empresa') }}#qa">Calidad</a>
+                <a href="{{  ( app.locale  ==  'en')?  url_to( 'company' ) :  url_to( 'empresa' )   }}#qa">Calidad</a>
               </li>
             </ul>
           </div>
@@ -68,16 +68,14 @@
         <a href="../news/">Noticias</a>
       </li>
       <li class="">
-        <a href="../contact/">Contacto</a>
+        <a href=" ( app.locale  ==  'en')?  url_to( 'contact' ) :  url_to( 'contacto' )  ">Contacto</a>
       </li>
       <li>
         <a href="#budget-form" class="btn btn--primary">Pídenos presupuesto</a>
       </li>
     </ul>
   </div>
-
-  <a href="{{ url('/') }}" class="header__logo">
-      {# <img src="images/content/logo-web.svg" class="header__logo__logo" alt="Logo web" /> #}
+  <a href="{{ ( app.locale  ==  'en')?  url_to( 'home' ) :  url( '/' )  }}" class="header__logo">
     <img src="{{ image_url('theme::images/content/logo-web.svg') }}" class="header__logo__logo" alt="Logo web" />
   </a>
   <div class="header__navs">
@@ -104,36 +102,58 @@
         </li>
       </ul>
       <ul class="header__navs__info__right hide-on-mobile">
-        <li>
-          <a href="#" class="{{ (app.locale  ==  'es') ?  'active' : '' }}">ES</a>
-        </li>
-        <li>
-          <a href="#" class="{{ (app.locale  ==  'en') ?  'active' : '' }}">EN</a>
-        </li>
+        {% if app.locale  ==  'en' %}
+          <li>
+            <a href="/es/{{ page.translation_url }}" class="">ES</a>
+          </li>
+          <li>
+            <a href="/en/{{ page.slug }}" class="active">EN</a>
+          </li>
+        {% else %}
+          <li>
+            <a href="/es/{{ page.slug }}" class="active">ES</a>
+          </li>
+          <li>
+            <a href="/en/{{ page.translation_url }}" class="">EN</a>
+          </li>
+        {% endif %}
       </ul>
     </div>
 
     <div class="header__navs__menu">
       <ul>
-        <li class="">
-          <a href="{{ url('/servicios') }}">Servicios</a>
-        </li>
-        <li class="">
-          <a href="{{ url('/servicios') }}">Empresa</a>
-        </li>
-        <li class="">
-          <a href="../news/">Noticias</a>
-        </li>
-        <li class="">
-          <a href="../contact/">Contacto</a>
-        </li>
+          {% if app.locale  ==  'en' %}
+            <li class="">
+              <a href=" {{ url_to( 'services' ) }}">Servicios</a>
+            </li>
+            <li class="">
+              <a href="{{ url_to( "company" ) }} ">Empresa</a>
+            </li>
+            <li class="">
+              <a href="../news/">Noticias</a>
+            </li>
+            <li class="">
+              <a href="{{ url_to( "contact" ) }}">Contacto</a>
+            </li>
+          {% else %}
+            <li class="">
+              <a href=" {{ url_to( 'servicios' ) }}">Servicios</a>
+            </li>
+            <li class="">
+              <a href="{{ url_to( "empresa" ) }} ">Empresa</a>
+            </li>
+            <li class="">
+              <a href="../news/">Noticias</a>
+            </li>
+            <li class="">
+              <a href="{{ url_to( "contacto" ) }}">Contacto</a>
+            </li>
+          {% endif %}
       </ul>
       <button class="btn-menu-mobile">
         <span class="menu-bar"></span>
       </button>
     </div>
   </div>
-
   <a href="#budget-form" class="btn btn--primary btn-budget">Pídenos presupuesto</a>
-
 </header>

@@ -1,0 +1,26 @@
+{% extends layout('posts') %}
+
+{% block content %}
+    <div id="posts">
+        <div class="container">
+                <h1>hola</h1>
+                <h1>hola</h1>
+                <h1>hola</h1>
+                <h1>hola</h1>
+                <h1>hola</h1>
+            {% set posts = entries('posts').recent().paginate() %}
+
+            {% set highlight = posts | slice(0, 2 )%}
+
+
+            {{ dump(highlight) }}
+
+
+
+                {% include "anomaly.module.posts::posts/partials/posts" with {"posts": posts} %}
+
+            {{ posts.links|raw }}
+
+        </div>
+    </div>
+{% endblock %}
