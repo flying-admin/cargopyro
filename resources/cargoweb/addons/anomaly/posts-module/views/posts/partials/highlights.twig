@@ -1,0 +1,38 @@
+
+<div class="news-slider">
+    <div class="news-slider__wrap" >
+        <p class="news-slider__wrap__title">Noticias</p>
+
+        {% for post in highlights %}
+        <div class="news-slider__wrap__text">
+            <p class="title">
+                {{ post.title }}
+            </p>
+            <p class="date">
+                <time class="date" datetime="{{ post.publish_at.iso }}">
+                    {{ post.publish_at.format(config_get('streams::datetime.date_format')) }}
+                </time>
+            </p>
+            <div class="text">
+                {% if post.summary %}
+                    <p>{{ post.summary|nl2br|raw }}</p>
+                {% endif %}
+                <a href="{{ post.route('view') }}" class="link">Leer más</a>
+            </div>
+        </div>
+
+
+
+        <div class="news-slider__wrap__slider">
+            {% if post.imagen_post_destacado %}
+                {{ post.imagen_post_destacado.make.class("news-slider__image")|raw }}
+            {% else %}
+                {{ post.post_image.make.class("news-slider__image")|raw }}
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+

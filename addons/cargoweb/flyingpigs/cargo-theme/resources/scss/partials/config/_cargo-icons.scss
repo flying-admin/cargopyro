@@ -23,6 +23,10 @@
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
+.pagination li:first-of-type a:before,
+.pagination li:last-of-type a:before,
+.pagination li:first-of-type span:before,
+.pagination li:last-of-type span:before,
 .icon-angle-down:before,
 .icon-angle-left:before,
 .icon-angle-right:before,
@@ -76,6 +80,10 @@
 .icon-angle-left:before { content: "\f100"; }
 .icon-angle-right:before { content: "\f101"; }
 .icon-angle-up:before { content: "\f120"; }
+.pagination li:first-of-type a:before{content: "\f100";}
+.pagination li:last-of-type a:before{content: "\f101";}
+.pagination li:first-of-type span:before{content: "\f100";}
+.pagination li:last-of-type span:before{content: "\f101";}
 .icon-arrow-down:before { content: "\f102"; }
 .icon-arrow-left:before { content: "\f103"; }
 .icon-arrow-right:before { content: "\f104"; }

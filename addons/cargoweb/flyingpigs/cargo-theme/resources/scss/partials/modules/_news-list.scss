@@ -69,10 +69,9 @@
 }
 
 
-.paginator {
-  width: 100%;
-  padding: 10px 0 120px 10px;
-  ul {
+.pagination {
+
+    padding: 10px 0 120px 10px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -85,23 +84,10 @@
           cursor: default;
         }
       }
-      &.prev {
-        font-size: 16px;
-        line-height: 32px;
-        a {
-          text-decoration: none;
-          color: $primary;
-        }
-      }
-      &.next {
-        font-size: 16px;
-        line-height: 32px;
-        a {
-          text-decoration: none;
-          color: $primary;
-        }
-      }
-      &.page {
+
+
+
+      &.page-item {
         font-family: $font_title;
         a {
           color: $primary;
@@ -112,14 +98,42 @@
         span {
           color: rgba($black, 0.2);
         }
-        &.actual {
+        &.active {
           span {
             display: block;
             padding: 0 10px;
             color: $black;
           }
         }
+
+        &:first-of-type  ,
+        &:last-of-type {
+          span,a{
+            color:#fff;
+            font-size: 16px;
+            line-height: 20px;
+            &:before{
+              font-size: 16px;
+              line-height: 32px;
+              text-decoration: none;
+              color: $primary;
+              position: absolute;
+            }
+          }
+
+          &.disabled{
+            span{
+              &:before{
+                color: rgba(46,46,47,0.2);
+              }
+            }
+          }
+        }
+
+
+
       }
+
     }
-  }
+
 }

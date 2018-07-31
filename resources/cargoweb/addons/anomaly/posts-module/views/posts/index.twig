@@ -1,26 +1,213 @@
 {% extends layout('posts') %}
 
 {% block content %}
-    <div id="posts">
-        <div class="container">
-                <h1>hola</h1>
-                <h1>hola</h1>
-                <h1>hola</h1>
-                <h1>hola</h1>
-                <h1>hola</h1>
-            {% set posts = entries('posts').recent().paginate() %}
 
-            {% set highlight = posts | slice(0, 2 )%}
+    {% set posts = entries('posts').recent().paginate(12) %}
+
+    {# set highlights =  entries('posts', 'posts').type('destacado').recent().take(1).get()  #} {# post by type #}
+
+    {% set category = entries('posts', 'categories').findBySlug('destacado') %}
+    {% set highlights = entries('posts').whereCategoryId(category.id).recent().take(1).get()   %}  {# post with categorie news #}
+
+    {% if highlights|length == 0 %}
+
+            {% set  highlights = posts | slice(0, 1 ) %} {# last post #}
+
+    {% endif %}
 
 
-            {{ dump(highlight) }}
 
+    {% include "anomaly.module.posts::posts/partials/highlights" with {"posts": highlights } %}
 
-
-                {% include "anomaly.module.posts::posts/partials/posts" with {"posts": posts} %}
-
-            {{ posts.links|raw }}
-
+    <div class="news-list  news-list--blue">
+        <div class="news-list__wrapp">
+            {% include "anomaly.module.posts::posts/partials/posts" with {"posts": posts} %}
         </div>
     </div>
+
+    {{ posts.links|raw }}
+
+    <div class="map " id="map">
+
+        <div class="map__map"></div>
+
+        <div class="map__list">
+
+            <div class="map__list__slider">
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="map__list__item">
+                                <p class="map__list__item__title">Cargo Services, S. A.</p>
+                                <ul class="map__list__item__list">
+                                    <li>
+                                        <span class="icon icon-location"></span>
+                                        <span>C/ Cavanilles, 45 <br />28007 Madrid </span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-phone"></span>
+                                        <span>Tel: +34 914 341 820</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-mail"></span>
+                                        <a href="mailto:infomad@cargoservicesgroup.com">infomad@cargoservicesgroup.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="map__list__item">
+                                <p class="map__list__item__title">Cargo Services Barcelona, S. A.</p>
+                                <ul class="map__list__item__list">
+                                    <li>
+                                        <span class="icon icon-location"></span>
+                                        <span>C/ Ronda San Pedro, 19 – 21, 4º - 1º <br />08010 Barcelona </span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-phone"></span>
+                                        <span>Tel: +34 933 019 633</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-mail"></span>
+                                        <a href="mailto:infobcn@cargoservicesgroup.com">infobcn@cargoservicesgroup.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="map__list__item">
+                                <p class="map__list__item__title">Cargo Services Pamplona, S. A.</p>
+                                <ul class="map__list__item__list">
+                                    <li>
+                                        <span class="icon icon-location"></span>
+                                        <span>Paseo García el de Najera , 2 1º Of.3 <br />31008 Pamplona</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-phone"></span>
+                                        <span>Tel: +34 948 172 245 </span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-mail"></span>
+                                        <a href="mailto:infopna@cargoservicesgroup.com">infopna@cargoservicesgroup.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- <div class="swiper-slide">
+                          <div class="map__list__item">
+                            <p class="map__list__item__title">Cargo Services, S.A. Santander</p>
+                            <ul class="map__list__item__list">
+                              <li>
+                                <span class="icon icon-location"></span>
+                                <span>Marqués de Comillas, 28  2º Drcha <br />39520 - Comillas</span>
+                              </li>
+                              <li>
+                                <span class="icon icon-phone"></span>
+                                <span>Tel: +34 942 72 23 91</span>
+                              </li>
+                              <li>
+                                <span class="icon icon-fax"></span>
+                                <span>Fax: +34 914 341 821</span>
+                              </li>
+                              <li>
+                                <span class="icon icon-mail"></span>
+                                <a href="mailto:m.alonso@cargoservicesgroup.com">m.alonso@cargoservicesgroup.com</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div> -->
+                        <div class="swiper-slide">
+                            <div class="map__list__item">
+                                <p class="map__list__item__title">Cargo Services Polonia Sp. z o.o.</p>
+                                <ul class="map__list__item__list">
+                                    <li>
+                                        <span class="icon icon-location"></span>
+                                        <span>Ul. I Armii Wojska Polskiego 13 <br />81-383 Gdynia</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-phone"></span>
+                                        <span>Tel: +48 58 668 44 18</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-mail"></span>
+                                        <a href="mailto:infopol@cargoservicesgroup.com">infopol@cargoservicesgroup.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="map__list__item">
+                                <p class="map__list__item__title">Cargo Services México S.A. de C.V.</p>
+                                <ul class="map__list__item__list">
+                                    <li>
+                                        <span class="icon icon-location"></span>
+                                        <span>Diagonal de Patriotismo Nº 1, Piso 4 <br />Col. Hipódromo de la Condesa <br />Delegación Cuauhtémoc, C.P. 06170 <br />México, D.F. (México)</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-phone"></span>
+                                        <span>Tel: +52 55 5543 2007 / 2008 / 2020</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-mail"></span>
+                                        <a href="mailto:comercial@cargoservicesgroup.com.mx">comercial@cargoservicesgroup.com.mx</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="map__list__item">
+                                <p class="map__list__item__title">Cargo Services Panama S.A.</p>
+                                <ul class="map__list__item__list">
+                                    <li>
+                                        <span class="icon icon-location"></span>
+                                        <span>Urbanización Nuevo Paitilla, calle 59 <br />Duplex 36. Planta Alta. <br />Panama City (Panama)</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-phone"></span>
+                                        <span>Tel: +507 303 2320 / 2321</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-mail"></span>
+                                        <a href="mailto:infopan@cargoservicesgroup.com">infopan@cargoservicesgroup.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="map__list__item">
+                                <p class="map__list__item__title">Delegación en Cuba</p>
+                                <ul class="map__list__item__list">
+                                    <li>
+                                        <span class="icon icon-location"></span>
+                                        <span>Calle 36A ,e/1ª y 3ª, No. 121. Apto 1 <br />Miramar, Municipio Playa. <br />La Habana (Cuba) </span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-phone"></span>
+                                        <span>Tel: +537 204 7211</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon icon-mail"></span>
+                                        <a href="mailto:n.carnota@cargoservicesgroup.cu">n.carnota@cargoservicesgroup.cu</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map__list__slider__navigation">
+                        <div class="swiper-button-prev"><span class="icon icon-arrow-left"></span></div>
+                        <div class="swiper-button-next"><span class="icon icon-arrow-right"></span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYC_HIH5QDJ0hX9EV3KGuiN360v8X01oo&callback=initMap"></script>
+        <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYC_HIH5QDJ0hX9EV3KGuiN360v8X01oo"></script> -->
+
+
+    </div>
+
 {% endblock %}

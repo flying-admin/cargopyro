@@ -1,10 +1,110 @@
 {% extends post.type.theme_layout.key %}
 
 {% block content %}
+
+    <div class="article ">
+        <a href="#" class="article__back">
+            <span class="icon icon-arrow-left"></span>
+            Back
+        </a>
+        <p class="article__title">{{ post.title }}</p>
+        <div class="article__image ">
+            {% if post.post_image %}
+                {{ post.post_image.make.class("article__image__image")|raw }}
+            {% endif %}
+
+
+            <p class="article__image__text">
+               {% if post.post_cite %}
+                   “{{ post.post_cite.make|raw }}”
+                {% endif %}
+            </p>
+        </div>
+        <p class="article__date">22 MAR 2018</p>
+        <div class="article__text">
+            {% block post %}
+                {{ content|raw }}
+            {% endblock %}
+        </div>
+        <div class="article__social">
+            <ul>
+                <li class="share-text">
+              <span>
+                Compartir
+              </span>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-facebook"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-twitter"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-gplus"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="news-list  news-list--white">
+        <div class="news-list__wrapp">
+            <div class="article-preview ">
+                <div class="article-preview__image">
+                    <img src="http://placehold.it/289x183" class="article-preview__image__image" alt="289x183" />
+                </div>
+                <div class="article-preview__content">
+                    <p class="date">
+                        <time class="date" datetime="{{ post.publish_at.iso }}">
+                            {{ post.publish_at.format(config_get('streams::datetime.date_format')) }}
+                        </time>
+                    </p>
+                    <p class="title">Cargo Services Group en Linkedin lorem ipsum</p>
+                    <div class="text">
+                        <p>Donec eget neque elit. Ut ornare vehicula nunc sit amet rutrum. Vivamus tincidunt suscipit enim et laoreet.
+                            Donec eros odio, porta eu faucibus id, ultricies in lacus.</p>
+                    </div>
+                    <a href="#" class="link">Leer más</a>
+                </div>
+            </div>
+            <div class="article-preview ">
+                <div class="article-preview__image">
+                    <img src="http://placehold.it/289x183" class="article-preview__image__image" alt="289x183" />
+                </div>
+                <div class="article-preview__content">
+                    <p class="date">22 MAR 2018</p>
+                    <p class="title">Cargo Services Group en Linkedin lorem ipsum</p>
+                    <div class="text">
+                        <p>Donec eget neque elit. Ut ornare vehicula nunc sit amet rutrum. Vivamus tincidunt suscipit enim et laoreet.
+                            Donec eros odio, porta eu faucibus id, ultricies in lacus.</p>
+                    </div>
+                    <a href="#" class="link">Leer más</a>
+                </div>
+            </div>
+            <div class="article-preview ">
+                <div class="article-preview__image">
+                    <img src="http://placehold.it/289x183" class="article-preview__image__image" alt="289x183" />
+                </div>
+                <div class="article-preview__content">
+                    <p class="date">22 MAR 2018</p>
+                    <p class="title">Cargo Services Group en Linkedin lorem ipsum</p>
+                    <div class="text">
+                        <p>Donec eget neque elit. Ut ornare vehicula nunc sit amet rutrum. Vivamus tincidunt suscipit enim et laoreet.
+                            Donec eros odio, porta eu faucibus id, ultricies in lacus.</p>
+                    </div>
+                    <a href="#" class="link">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="posts">
         <div class="container">
             <article id="post">
-                {{ dump(post) }}
                 <header>
 
                     <h1>{{ post.title }}</h1>
@@ -53,3 +153,5 @@
         </div>
     </div>
 {% endblock %}
+
+

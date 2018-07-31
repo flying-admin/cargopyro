@@ -151,4 +151,15 @@
       }
     }
   }
+
+
+  &__image{
+    max-height: 400px;
+    width: auto;
+    margin-right: 0;
+    margin-left: auto;
+    @include media("<desktop") {
+      margin-right: auto;
+    }
+  }
 }
