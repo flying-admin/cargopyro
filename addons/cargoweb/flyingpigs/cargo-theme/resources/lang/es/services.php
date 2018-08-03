@@ -2,6 +2,15 @@
 
 return [
     'since'=>'DESDE 1988',
+    'icon_menu_1' => 'Terrestre',
+    'icon_menu_2' => 'Marítimo',
+    'icon_menu_3' => 'Aéreo',
+    'icon_menu_4' => 'Cross Trade',
+    'icon_menu_5' => 'Proyectos',
+    'icon_menu_6' => 'Aduanas',
+    'icon_menu_7' => 'Almacenes',
+    'icon_menu_8' => 'Consultoría',
+    'icon_menu_9' => 'Seguros',
     'banner_title'=>'LA INGENIERÍA DEL TRANSPORTE',
     'submenu_land-freight'=>'TRANSPORTE TERRESTRE',
     'submenu_sea-freight'=>'TRANSPORTE MARÍTIMO',

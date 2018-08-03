@@ -6,10 +6,10 @@
 
       <ul class="footer__content__nav">
         <li>
-          <a href="../privacy-policy/">Política de Privacidad</a>
+          <a href="{{ url_to(  trans('theme::route.privacy-policy') ) }}">{{  trans('theme::footer.privacy-policy')  }}</a>
         </li>
         <li>
-          <a href="/legal-warning.html">Aviso legal</a>
+          <a href="{{ url_to(  trans('theme::route.legal-notice') ) }}">{{  trans('theme::footer.legal-notice')  }}</a>
         </li>
       </ul>
     </div>
@@ -21,40 +21,82 @@
     <div class="modal__dialog__close" data-modal-close></div>
     <div class="modal__dialog__wrapper">
       <div class="modal__dialog__wrapper__title">
-        <p class="small">Solicita</p>
-        <p class="title">Presupuesto gratuito</p>
+        <p class="small">
+            {{ trans('theme::home.form_intro') }}
+        </p>
+        <p class="title">
+            {{ trans('theme::home.form_intro_1') }}
+        </p>
       </div>
       <div class="modal__dialog__wrapper__content">
         <div class="budget-modal__wrap__form">
-          <form>
-            <div class="input ">
-              <label for="estimation-origin" class="input__label">
-                <span class="icon icon-location"></span>
-              </label>
-              <input type="text" id="estimation-origin" name="estimation-origin" placeholder="Origen" value="" class="input__field">
-            </div>
-            <div class="input ">
-              <label for="estimation-destination" class="input__label">
-                <span class="icon icon-location"></span>
-              </label>
-              <input type="text" id="estimation-destination" name="estimation-destination" placeholder="Destino" value="" class="input__field">
-            </div>
-            <div class="input ">
-              <label for="estimation-weight" class="input__label">
-                <span class="icon icon-weight"></span>
-              </label>
-              <input type="text" id="estimation-weight" name="estimation-weight" placeholder="¿Cuánto pesa tu envío?" value="" class="input__field">
-            </div>
-            <div class="input ">
-              <label for="estimation-mail" class="input__label">
-                <span class="icon icon-mail"></span>
-              </label>
-              <input type="mail" id="estimation-mail" name="estimation-mail" placeholder="Email" value="" class="input__field">
-            </div>
-            <button type="button" class="btn btn--primary btn--block">
-              Pídenos presupuesto
-            </button>
-          </form>
+            {%  set form = form('contact').fields({
+
+                'estimationorigin': {
+                    'placeholder': trans('theme::home.form_field_origin')    ,
+                    'label':   trans('theme::home.form_field_origin')    ,
+                    'type': 'anomaly.field_type.text',
+                    'required': true,
+                    'class': 'input__field'
+                },
+                'estimationdestination': {
+                    'placeholder':    trans('theme::home.form_field_destination')    ,
+                    'label':   trans('theme::home.form_field_destination')   ,
+                    'type': 'anomaly.field_type.text',
+                    'required': true,
+                    'class': 'input__field'
+                },
+                'estimationweight': {
+                    'placeholder':    trans('theme::home.form_field_weigh')    ,
+                    'label':   trans('theme::home.form_field_weigh')   ,
+                    'type': 'anomaly.field_type.text',
+                    'required': true,
+                    'class': 'input__field'
+                },
+                'estimationemail': {
+                    'placeholder':    trans('theme::home.form_field_email')    ,
+                    'label':   trans('theme::home.form_field_email')   ,
+                    'type': 'anomaly.field_type.email',
+                    'required': true,
+                    'class': 'input__field'
+                }
+            }).actions(
+                {'submit':{
+                    'class':'btn btn--primary btn--block',
+                    'text':    trans('theme::home.form_field_button')
+                }
+                }).to('ultano@flyingpigs.es').from('hola@flyingpigs.es').get %}
+
+            {{ form.open|raw }}
+
+          <div class="input ">
+            <label for="estimation-origin" class="input__label">
+              <span class="icon icon-location"></span>
+            </label>
+              {{ form.fields.estimationorigin.input|raw }}
+          </div>
+          <div class="input ">
+            <label for="estimation-destination" class="input__label">
+              <span class="icon icon-location"></span>
+            </label>
+              {{ form.fields.estimationdestination.input|raw }}
+          </div>
+          <div class="input ">
+            <label for="estimation-weight" class="input__label">
+              <span class="icon icon-weight"></span>
+            </label>
+              {{ form.fields.estimationweight.input|raw }}
+          </div>
+          <div class="input ">
+            <label for="estimation-mail" class="input__label">
+              <span class="icon icon-mail"></span>
+            </label>
+              {{ form.fields.estimationemail.input|raw }}
+          </div>
+
+            {{ form.actions|raw }}
+
+            {{ form.close|raw }}
         </div>
       </div>
     </div>

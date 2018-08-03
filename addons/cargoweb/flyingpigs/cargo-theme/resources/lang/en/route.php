@@ -5,5 +5,7 @@ return [
     'home' => 'home',
     'company' => 'company',
     'contact' => 'contact',
-    'news' => 'news'
+    'news' => 'news',
+    'privacy-policy' => 'privacy-policy',
+    'legal-notice' =>'legal-notice',
 ];

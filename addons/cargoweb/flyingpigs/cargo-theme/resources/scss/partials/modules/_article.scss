@@ -86,6 +86,16 @@
       color: $darkgrey;
       margin-bottom: 10px;
     }
+
+    a{
+      line-height: 61px;
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #155b9e;
+      font-family: $font_default ;
+    }
   }
   &__social {
     ul {

@@ -1,0 +1,40 @@
+{% htmlcompress %}
+    <!doctype html>
+
+    <!--[if lt IE 7]>
+    <html class="nojs ms lt_ie7" lang="en"><![endif]-->
+    <!--[if IE 7]>
+    <html class="nojs ms ie7" lang="en"><![endif]-->
+    <!--[if IE 8]>
+    <html class="nojs ms ie8" lang="en"><![endif]-->
+    <!--[if gt IE 8]>
+    <html class="nojs ms" lang="en"><![endif]-->
+
+    <html>
+    <head>
+        {% include "theme::partials/metadata" %}
+        {% include "theme::partials/assets" %}
+    </head>
+    <body>
+    <div class="body-wrapper">
+
+        {% include "theme::partials/header" %}
+
+        <div class="content__wrapper">
+            <div class="error ">
+                <span class="icon icon-truck"></span>
+                <p class="title">
+                    Error 500
+                </p>
+                <a  href="{{ url_to( trans('theme::route.home') ) }}" class="btn btn--primary" >
+                    Volver a la home
+                </a>
+            </div>
+        </div>
+
+        {% include "theme::partials/footer" %}
+
+    </div>
+    </body>
+    </html>
+{% endhtmlcompress %}

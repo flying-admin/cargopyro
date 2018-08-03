@@ -119,6 +119,8 @@ class CargoThemeServiceProvider extends AddonServiceProvider
     protected $overrides = [
         //'streams::errors/404' => 'module::errors/404',
         //'streams::errors/500' => 'module::errors/500',
+        'streams::errors/404' => 'theme::errors/404',
+        'streams::errors/500' => 'theme::errors/500'
     ];
 
     /**
@@ -129,6 +131,8 @@ class CargoThemeServiceProvider extends AddonServiceProvider
     protected $mobile = [
         //'streams::errors/404' => 'module::mobile/errors/404',
         //'streams::errors/500' => 'module::mobile/errors/500',
+        'streams::errors/404' => 'theme::errors/404',
+        'streams::errors/500' => 'theme::errors/500'
     ];
 
     /**
