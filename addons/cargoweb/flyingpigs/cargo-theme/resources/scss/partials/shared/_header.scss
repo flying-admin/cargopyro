@@ -2,10 +2,8 @@
   background-color: $white;
   width: 100%;
   max-width: 1600px;
-
   display: flex;
   margin: 0 auto;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -31,7 +29,7 @@
       height: auto;
       width: 100px;
       padding: 0 0 0 14px;
-      top: 30px;
+      top: 9px;
     }
     &__logo {
       width: auto;
@@ -41,6 +39,7 @@
         // height: auto;
         // width: 100%;
         max-height: 37px;
+        max-height: 54px;
       }
     }
   }
@@ -61,7 +60,11 @@
       color: $white;
       height: 39px;
       @include media("<phablet") {
-        height: 29px;
+        height: auto;
+        position: absolute;
+        top: 71px;
+        width: 100%;
+       background-color: $primary;
       }
       a {
         color: $white;
@@ -176,11 +179,17 @@
         width: 100%;
         text-align: center;
         display: inline-block;
+        transition: padding .3s;
+        &.big-padding{
+          padding: 15px 0;
+        }
       }
     }
     &__menu {
       @include media("<phablet") {
-        height: 42px;
+        //height: 42px;
+        height: 71px;
+        background-color: #002449;
         display: flex;
         justify-content: flex-end;
       }
@@ -228,35 +237,37 @@
         display: none;
         @include media("<phablet") {
           display: block;
-          background-color: $white;
+          //background-color: $white;
+          background-color: $secondary;
           border: none;
-          border-left: 1px solid $lightgrey;
-          height: 42px;
-          width: 56px;
-          padding: 13px 20px 12px 15px;
+          //border-left: 1px solid $lightgrey;
+          //height: 42px;
+          //width: 56px;
+          height: 71px;
+          width: 66px;
+          padding:13px 11px 12px 15px;
+          //padding: 13px 20px 12px 15px;
           .menu-bar {
             display: block;
-            width: 20px;
-            height: 3px;
+            width: 40px;
+            height: 4px;
             background-color: $secondary;
+            background-color: $white;
             position: relative;
-            &:before {
+            &:before ,&:after {
               content: '';
               display: block;
-              width: 20px;
-              height: 3px;
+              width: 40px;
+              height: 4px;
               background-color: $secondary;
+              background-color: $white;
               position: absolute;
-              top: -7px;
+            }
+            &:before {
+              top: -11px;
             }
             &:after {
-              content: '';
-              display: block;
-              width: 20px;
-              height: 3px;
-              background-color: $secondary;
-              position: absolute;
-              top: 7px;
+              top: 11px;
             }
           }
         }

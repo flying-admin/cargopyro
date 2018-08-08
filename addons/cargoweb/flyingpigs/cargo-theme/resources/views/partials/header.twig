@@ -111,8 +111,11 @@
       </li>
     </ul>
   </div>
-  <a href="{{ ( app.locale  ==  'en')?  url_to( 'home' ) :  url( '/' )  }}" class="header__logo">
+  <a href="{{ ( app.locale  ==  'en')?  url_to( 'home' ) :  url( '/' )  }}" class="header__logo hide-on-mobile">
     <img src="{{ image_url('theme::images/content/logo-web.svg') }}" class="header__logo__logo" alt="Logo web" />
+  </a>
+  <a href="{{ ( app.locale  ==  'en')?  url_to( 'home' ) :  url( '/' )  }}" class="header__logo mobile-only">
+    <img src="{{ image_url('theme::images/content/logo-web_light.svg') }}" class="header__logo__logo" alt="Logo web" />
   </a>
   <div class="header__navs">
     <div class="header__navs__info">
@@ -171,7 +174,7 @@
           {% endif %}
       </ul>
       <div class="mobile-only header__navs__form-link"> 
-        <a href="#" class="" data-modal-open="budget-modal">{{ trans('theme::header.Pidenos_presupuesto') }}</a>
+        <a href="#" class="shrink-on-scroll big-padding" data-modal-open="budget-modal">{{ trans('theme::header.Pidenos_presupuesto') }}</a>
       </div>
     </div>
 
