@@ -25,6 +25,7 @@
 
     @include media("<phablet"){
       padding: 38px 16px 16px;
+      margin: 0px;
     }
 
     &__close {

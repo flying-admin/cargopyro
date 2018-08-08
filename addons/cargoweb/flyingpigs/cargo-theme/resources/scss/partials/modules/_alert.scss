@@ -1,0 +1,54 @@
+.alert{
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin: 1rem 10px;
+    border: 1px solid transparent;
+    border-radius: 0;
+
+    &-success{
+      color: #004085;
+      background-color: #cce5ff;
+      border-color: #b8daff;
+    }
+
+    &-danger{
+      color: #721c24;
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+    }
+
+    &.alert-dismissible .close{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: .5rem 1.25rem;
+      color: inherit;
+      background-color: transparent;
+      border: 0;
+      -webkit-appearance: none;
+      float: right;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1;
+      text-shadow: 0 1px 0 #fff;
+      opacity: .5;
+    }
+
+    p{
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: .3rem; 
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+}
