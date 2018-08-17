@@ -4,7 +4,8 @@
   padding-top:0px;
   @include media("<tablet") {
     flex-direction: column;
-    padding-bottom:80px; 
+    padding-top:80px;
+    padding-bottom:20px; 
   }
   &__text {
     width: calc(100% / 12 * 7);
@@ -150,3 +151,8 @@
   }
 }
 
+@include media("<tablet") {
+  .services-list + .content-image,.company-menu + .content-image{
+    margin-top: -60px;
+  }
+}
