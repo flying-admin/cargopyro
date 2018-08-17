@@ -89,25 +89,8 @@
       <li class="">
         <a href="{{ url_to( trans('theme::route.contact') ) }}">{{ trans('theme::header.Contacto') }}</a>
       </li>
-      <li  class="header__navs__menu__contact close-menu">
-        <ul>
-          <li>
-            <a href="#" class="localiza-oficina" data-scroll="#map">
-              <!-- falta enlace -->
-              <span class="icon icon-location"></span>
-            </a>
-          </li>
-          <li class="phone-number">
-            <a href="tel:+34 91 434 1820">
-              <span class="icon icon-phone"></span>
-            </a>
-          </li>
-          <li class="mail-address">
-            <a href="mailto:infomad@cargoservicesgroup.com">
-              <span class="icon icon-mail"></span>
-            </a>
-          </li>
-        </ul>
+      <li class="close-menu">
+        <a href="#" class="btn btn--primary" data-modal-open="budget-modal">{{ trans('theme::header.Pidenos_presupuesto') }}</a>
       </li>
     </ul>
   </div>
@@ -116,7 +99,7 @@
   </a>
   <div class="header__navs">
     <div class="header__navs__info">
-      <ul class="header__navs__info__left hide-on-mobile">
+      <ul class="header__navs__info__left">
         <li>
           <a href="#" class="localiza-oficina" data-scroll="#map">
             <!-- falta enlace -->
@@ -170,9 +153,6 @@
             </li>
           {% endif %}
       </ul>
-      <div class="mobile-only header__navs__form-link"> 
-        <a href="#" class="" data-modal-open="budget-modal">{{ trans('theme::header.Pidenos_presupuesto') }}</a>
-      </div>
     </div>
 
     <div class="header__navs__menu">
