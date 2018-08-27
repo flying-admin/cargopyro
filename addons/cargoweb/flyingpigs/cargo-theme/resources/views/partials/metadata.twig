@@ -29,7 +29,7 @@
 {# {{ favicons("theme::img/favicon.png") }} #}
 
 {# Theme Styles #}
-{{ asset_add("app.css", "theme::scss/stylesheets.scss", ["live"]) }}
+{{ asset_add("app.css", "theme::scss/stylesheets.scss", ["min"]) }}
 {{ asset_style("app.css", ["min", "watch@theme::scss"]) }}
 
 {{ template.includes.render('head')|raw }}
