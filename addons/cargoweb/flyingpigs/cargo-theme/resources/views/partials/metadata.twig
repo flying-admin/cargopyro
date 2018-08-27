@@ -27,11 +27,11 @@
 </title>
 
 {# Theme Favicon #}
-{{ favicons("theme::images/favicon/favicon.png") }} 
+{{ favicons("theme::images/favicon/favicon.png") }}
 
 {# Theme Styles #}
 {{ asset_add("app.css", "theme::scss/stylesheets.scss", ["min"]) }}
-{{ asset_style("app.css", ["min", "watch@theme::scss"]) }}
+{{ asset_style("app.css", ["min"]) }}
 
 {{ template.includes.render('head')|raw }}
 
