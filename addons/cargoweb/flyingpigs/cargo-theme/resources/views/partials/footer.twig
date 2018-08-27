@@ -3,60 +3,15 @@
   <div class="container">
     <div class="footer__content">
       <p>© Grupo Cargo Services</p>
-
       <ul class="footer__content__nav">
         <li>
-          <a href="../privacy-policy/">Política de Privacidad</a>
+          <a href="{{ url_to(  trans('theme::route.privacy-policy') ) }}">{{  trans('theme::footer.privacy-policy')  }}</a>
         </li>
         <li>
-          <a href="/legal-warning.html">Aviso legal</a>
+          <a href="{{ url_to(  trans('theme::route.legal-notice') ) }}">{{  trans('theme::footer.legal-notice')  }}</a>
         </li>
       </ul>
     </div>
   </div>
-
 </footer>
-<div class="modal budget-modal" data-modal="budget-modal" data-modal-close>
-  <div class="modal__dialog">
-    <div class="modal__dialog__close" data-modal-close></div>
-    <div class="modal__dialog__wrapper">
-      <div class="modal__dialog__wrapper__title">
-        <p class="small">Solicita</p>
-        <p class="title">Presupuesto gratuito</p>
-      </div>
-      <div class="modal__dialog__wrapper__content">
-        <div class="budget-modal__wrap__form">
-          <form>
-            <div class="input ">
-              <label for="estimation-origin" class="input__label">
-                <span class="icon icon-location"></span>
-              </label>
-              <input type="text" id="estimation-origin" name="estimation-origin" placeholder="Origen" value="" class="input__field">
-            </div>
-            <div class="input ">
-              <label for="estimation-destination" class="input__label">
-                <span class="icon icon-location"></span>
-              </label>
-              <input type="text" id="estimation-destination" name="estimation-destination" placeholder="Destino" value="" class="input__field">
-            </div>
-            <div class="input ">
-              <label for="estimation-weight" class="input__label">
-                <span class="icon icon-weight"></span>
-              </label>
-              <input type="text" id="estimation-weight" name="estimation-weight" placeholder="¿Cuánto pesa tu envío?" value="" class="input__field">
-            </div>
-            <div class="input ">
-              <label for="estimation-mail" class="input__label">
-                <span class="icon icon-mail"></span>
-              </label>
-              <input type="mail" id="estimation-mail" name="estimation-mail" placeholder="Email" value="" class="input__field">
-            </div>
-            <button type="button" class="btn btn--primary btn--block">
-              Pídenos presupuesto
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+

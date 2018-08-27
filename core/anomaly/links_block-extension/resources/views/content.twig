@@ -1,0 +1,11 @@
+{{ asset_add('styles.css', 'anomaly.extension.links_block::scss/block.scss') }}
+
+<ul>
+    {% for link in block.links %}
+        <li>
+            <a href="{{ link.url.normalize }}" target="{{ link.target.key }}">
+                {{ link.text.value|raw }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

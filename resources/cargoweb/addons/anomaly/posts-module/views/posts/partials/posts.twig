@@ -17,7 +17,7 @@
                     <p>{{ post.summary|nl2br|raw }}</p>
                 {% endif %}
             </div>
-            <a class="link"  href="{{ post.route('view') }}">Leer más </a>
+            <a class="link"  href="{{ post.route('view') }}">{{ trans('theme::news.more') }}</a>
         </div>
     </div>
 {% endfor %}

@@ -1,8 +1,11 @@
 .content-image {
   display: flex;
   padding-bottom: 100px;
+  padding-top:0px;
   @include media("<tablet") {
     flex-direction: column;
+    padding-top:80px;
+    padding-bottom:20px; 
   }
   &__text {
     width: calc(100% / 12 * 7);
@@ -145,5 +148,11 @@
         overflow: hidden;
       }
     }
+  }
+}
+
+@include media("<tablet") {
+  .services-list + .content-image,.company-menu + .content-image{
+    margin-top: -60px;
   }
 }

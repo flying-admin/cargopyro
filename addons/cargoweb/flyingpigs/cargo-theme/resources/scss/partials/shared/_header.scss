@@ -52,6 +52,7 @@
     }
     @include media("<tablet") {
       width: 100%;
+      box-shadow: 0px 0px 2px rgba(0, 36, 73, 0.3);
     }
     &__info {
       display: flex;
@@ -156,14 +157,18 @@
           a {
             font-size: 12px;
             font-weight: 900;
+            opacity: 0.7;
             &.active {
               font-weight: normal;
-              opacity: 0.7;
+              opacity: 1;
+              pointer-events: none;
             }
           }
         }
       }
     }
+
+
     &__menu {
       @include media("<phablet") {
         height: 42px;
@@ -272,6 +277,20 @@
     * {
       transition: all 0.5s;
     }
+
+    .header__navs__menu__contact{
+      background-color: #155b9e;
+      margin: 0 -30px;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        align-content: stretch;
+        li {
+          a {
+            border:none;
+          }}}
+    }
     ul {
       li {
         a {
@@ -294,6 +313,31 @@
           text-align: left;
           padding: 0 0 0 30px;
           height: 0;
+        }
+      }
+    }
+
+    .lang-mobile{
+      position: absolute;
+      top: 0px;
+      left: 25px;
+      display: block;
+      li{
+        display: inline-block;
+        padding: 5px 0px 0px;
+
+        a,span{
+          display: block;
+          width: 100%;
+          font-family:$font_default;
+          letter-spacing: 1px;
+          color: $bg;
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 0 10px;
+          font-size: 18px;
+          line-height: 22px;
+          border: none;
         }
       }
     }
@@ -381,6 +425,22 @@
             .btn {
               height: 98px;
               padding: 29px 0 29px 30px;
+            }
+          }
+        }
+        .lang-mobile{
+          position: absolute;
+          top: 35px;
+          left: 25px;
+          display: block;
+          li{
+            display: inline-block;
+            padding: 5px 0px 0px;
+            a,span{
+              padding: 0 10px;
+              font-size: 18px;
+              line-height: 22px;
+              border: none;
             }
           }
         }

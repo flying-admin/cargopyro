@@ -1,0 +1,27 @@
+<div class="news-list  news-list--white">
+    <div class="news-list__wrapp">
+        {% for post in last_posts %}
+            <div class="article-preview ">
+                <div class="article-preview__image">
+                    {% if post.post_image %}
+                        {{ post.post_image.make.class("article-preview__image__image")|raw }}
+                    {% endif %}
+                </div>
+                <div class="article-preview__content">
+                    <p class="date">
+                        <time class="date" datetime="{{ post.publish_at.iso }}">
+                            {{ post.publish_at.format(config_get('streams::datetime.date_format')) }}
+                        </time>
+                    </p>
+                    <p class="title">{{ post.title }}</p>
+                    <div class="text">
+                        {% if post.summary %}
+                            <p>{{ post.summary|nl2br|raw }}</p>
+                        {% endif %}
+                    </div>
+                    <a class="link"  href="{{ post.route('view') }}">{{ trans('theme::news.more') }}</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

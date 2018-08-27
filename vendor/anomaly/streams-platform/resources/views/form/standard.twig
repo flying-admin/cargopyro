@@ -1,0 +1,19 @@
+{{ asset_add("scripts.js", "streams::js/form/translations.js") }}
+
+{% block content %}
+
+    {{ form_open({'class': 'form', 'enctype': 'multipart/form-data', 'url': form.options.url ?: url_full()}) }}
+
+    {{ view("streams::form/partials/heading", {'form': form}) }}
+
+    {{ view("streams::form/partials/layout", {'form': form}) }}
+
+    {{ view("streams::buttons/buttons", {'buttons': form.actions}) }}
+
+    {% if form.buttons.count() %}
+        {{ view("streams::buttons/buttons", {'buttons': form.buttons}) }}
+    {% endif %}
+
+    {{ form_close() }}
+
+{% endblock %}
