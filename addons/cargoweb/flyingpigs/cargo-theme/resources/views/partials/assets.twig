@@ -4,7 +4,7 @@
 {{ asset_add("app.js", "theme::js/custom/*") }}
 {{ asset_add("app.js", "theme::js/all.js") }}
 
-{{ asset_script("app.js", ["min", "watch@theme::js"]) }}
+{{ asset_script("app.js", ["min"]) }}
 
 {# Include Scripts Loaded From Outside #}
 {% for script in asset_scripts("scripts.js") %}
