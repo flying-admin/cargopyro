@@ -1,0 +1,31 @@
+.colorpicker-field_type {
+
+    input[type="color"] {
+        -webkit-border-radius: .1rem;
+        -moz-border-radius: .1rem;
+        border-radius: .1rem;
+
+        -webkit-appearance: none;
+        margin-right: .4rem;
+        overflow: hidden;
+        cursor: pointer;
+        height: 2.4rem;
+        width: 2.4rem;
+        border: none;
+        padding: 0;
+    }
+
+    input[type="color"]::-webkit-color-swatch-wrapper {
+        padding: 0;
+    }
+
+    input[type="color"]::-webkit-color-swatch {
+        border: none;
+    }
+
+    input[type="text"] {
+        -webkit-border-radius: .1rem !important;
+        -moz-border-radius: .1rem !important;
+        border-radius: .1rem !important;
+    }
+}

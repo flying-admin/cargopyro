@@ -1,0 +1,16 @@
+{{ asset_add("styles.css", "anomaly.field_type.markdown::scss/input.scss") }}
+{{ asset_add("scripts.js", "anomaly.field_type.markdown::js/simplemde.min.js") }}
+{{ asset_add("scripts.js", "anomaly.field_type.markdown::js/input.js") }}
+
+<textarea
+        name="{{ field_type.input_name }}"
+        data-height="{{ field_type.config.height }}"
+        {{ html_attributes(field_type.attributes) }}
+        {{ field_type.disabled ? 'disabled' }}
+        {{ field_type.readonly ? 'readonly' }}>{{ field_type.value }}</textarea>
+
+{% if config('app.debug') and field_type.storage_path %}
+    <small class="text-muted hidden-md">
+        {{ field_type.storage_path }}
+    </small>
+{% endif %}

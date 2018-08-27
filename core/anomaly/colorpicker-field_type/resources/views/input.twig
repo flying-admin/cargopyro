@@ -1,0 +1,23 @@
+{{ asset_add("styles.css", "anomaly.field_type.colorpicker::scss/input.scss") }}
+{{ asset_add("scripts.js", "anomaly.field_type.colorpicker::js/input.js") }}
+
+<div class="input-group component">
+
+    <input
+            type="color"
+            value="{{ field_type.value }}"
+            id="{{ field_type.input_name }}__picker"
+            {{ field_type.disabled ? 'disabled' }}
+            {{ field_type.readonly ? 'readonly' }}>
+
+    <input
+            type="text"
+            class="form-control"
+            value="{{ field_type.value }}"
+            name="{{ field_type.input_name }}"
+            placeholder="{{ trans(field_type.placeholder) ?: '#000000' }}"
+            {{ html_attributes(field_type.attributes) }}
+            {{ field_type.disabled ? 'disabled' }}
+            {{ field_type.readonly ? 'readonly' }}>
+
+</div>
