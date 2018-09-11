@@ -43,8 +43,9 @@
           </div>
           <div class="modal__dialog__wrapper__content">
             <div class="budget-modal__wrap__form">
+              {{ form()|raw }}
                 {%  set form = form('contact').fields({
-    
+
                     'estimationorigin': {
                         'placeholder': trans('theme::home.form_field_origin')    ,
                         'label':   trans('theme::home.form_field_origin')    ,
@@ -78,10 +79,10 @@
                         'class':'btn btn--primary btn--block',
                         'text':    trans('theme::home.form_field_button')
                     }
-                    }).to('ultano@flyingpigs.es').from('hola@flyingpigs.es').get %}
-    
+                  }).to('ultano@flyingpigs.es').from('webquotation@cargoservicesgroup.com').get() %}
+
                 {{ form.open|raw }}
-    
+
               <div class="input ">
                 <label for="estimation-origin" class="input__label">
                   <span class="icon icon-location"></span>
@@ -106,9 +107,9 @@
                 </label>
                   {{ form.fields.estimationemail.input|raw }}
               </div>
-    
+
                 {{ form.actions|raw }}
-    
+
                 {{ form.close|raw }}
             </div>
           </div>
