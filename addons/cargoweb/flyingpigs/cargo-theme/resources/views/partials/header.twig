@@ -128,7 +128,7 @@
                 {% elseif 'posts' in app.request.pathinfo  %}
                   <a href="{{ app.request.requestUri }}" class="">ES</a>
                 {%  elseif   page.translation_url | length != 0 %}
-                  <a href="{{ page.translation_url }}" class="">ES</a>
+                  <a href="/{{ page.translation_url }}" class="">ES</a>
                 {% else %}
                   <a href="/" class="">ES</a>
                 {% endif  %}
@@ -182,5 +182,3 @@
 
 {#dump('post' in app.request.pathinfo)#}
 {# dump(app.request.requestUri) #}
-
-
