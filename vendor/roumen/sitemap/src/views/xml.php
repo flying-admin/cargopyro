@@ -8,13 +8,13 @@
 
 if (!empty($item['translations'])) {
 	foreach ($item['translations'] as $translation) {
-	echo "\t\t" . '<xhtml:link rel="alternate" hreflang="' . $translation['language'] . '" href="' . $translation['url'] . '" />' . "\n";
+	echo "\t\t" . '<link rel="alternate" hreflang="' . $translation['language'] . '" href="' . $translation['url'] . '" />' . "\n";
 	}
 }
 
 if (!empty($item['alternates'])) {
 	foreach ($item['alternates'] as $alternate) {
-	echo "\t\t" . '<xhtml:link rel="alternate" media="' . $alternate['media'] . '" href="' . $alternate['url'] . '" />' . "\n";
+	echo "\t\t" . '<link rel="alternate" media="' . $alternate['media'] . '" href="' . $alternate['url'] . '" />' . "\n";
 	}
 }
 
@@ -71,4 +71,3 @@ if (!empty($item['videos'])) {
 	</url>
 <?php endforeach; ?>
 </urlset>
-
