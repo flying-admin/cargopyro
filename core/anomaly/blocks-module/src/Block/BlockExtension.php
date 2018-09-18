@@ -123,6 +123,18 @@ class BlockExtension extends Extension
     }
 
     /**
+     * Unset the block.
+     *
+     * @return $this
+     */
+    public function unsetBlock()
+    {
+        $this->block = null;
+
+        return $this;
+    }
+
+    /**
      * Get the model.
      *
      * @return null|string

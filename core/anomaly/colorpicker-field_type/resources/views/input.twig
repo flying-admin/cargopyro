@@ -5,7 +5,7 @@
 
     <input
             type="color"
-            value="{{ field_type.value }}"
+            value="{{ field_type.value ?: field_type.placeholder }}"
             id="{{ field_type.input_name }}__picker"
             {{ field_type.disabled ? 'disabled' }}
             {{ field_type.readonly ? 'readonly' }}>

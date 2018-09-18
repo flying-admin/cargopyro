@@ -186,12 +186,11 @@
           display: none;
         }
         li {
-          a {
+          a,h1 {
             display: inline-block;
             padding: 0 20px;
             line-height: 61px;
             height: 61px;
-
             font-size: 12px;
             font-weight: 900;
             text-decoration: none;

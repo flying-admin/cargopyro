@@ -40,7 +40,7 @@ class GetMultiformFromRelation
      * Get the multiple form builder from the value.
      *
      * @param FieldRepositoryInterface $fields
-     * @param MultipleFormBuilder      $forms
+     * @param MultipleFormBuilder $forms
      * @return MultipleFormBuilder|null
      */
     public function handle(FieldRepositoryInterface $fields, MultipleFormBuilder $forms)
@@ -55,6 +55,7 @@ class GetMultiformFromRelation
         /* @var BlockInterface $entry */
         foreach ($value as $instance => $entry) {
 
+            $entry     = $decorator->undecorate($entry);
             $extension = $decorator->undecorate($entry->extension());
 
             /* @var FieldInterface $field */
@@ -66,6 +67,8 @@ class GetMultiformFromRelation
             $type = $field->getType();
 
             $type->setPrefix($this->fieldType->getPrefix());
+
+            $extension->setBlock($entry);
 
             $form = $type->form(
                 $field,

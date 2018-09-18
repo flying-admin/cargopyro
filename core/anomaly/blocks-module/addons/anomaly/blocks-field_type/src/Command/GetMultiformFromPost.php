@@ -2,6 +2,9 @@
 
 use Anomaly\BlocksFieldType\BlocksFieldType;
 use Anomaly\BlocksModule\Block\BlockExtension;
+use Anomaly\BlocksModule\Block\Contract\BlockInterface;
+use Anomaly\BlocksModule\Block\Contract\BlockRepositoryInterface;
+use Anomaly\BlocksModule\Block\Form\BlockFormBuilder;
 use Anomaly\ConfigurationModule\Configuration\Form\ConfigurationFormBuilder;
 use Anomaly\Streams\Platform\Addon\Extension\ExtensionCollection;
 use Anomaly\Streams\Platform\Field\Contract\FieldInterface;
@@ -39,15 +42,17 @@ class GetMultiformFromPost
     /**
      * Handle the command.
      *
-     * @param ExtensionCollection      $extensions
+     * @param ExtensionCollection $extensions
      * @param FieldRepositoryInterface $fields
-     * @param MultipleFormBuilder      $forms
-     * @param Request                  $request
+     * @param BlockRepositoryInterface $blocks
+     * @param MultipleFormBuilder $forms
+     * @param Request $request
      * @return MultipleFormBuilder|null
      */
     public function handle(
         ExtensionCollection $extensions,
         FieldRepositoryInterface $fields,
+        BlockRepositoryInterface $blocks,
         MultipleFormBuilder $forms,
         Request $request
     ) {
@@ -72,12 +77,20 @@ class GetMultiformFromPost
 
             $type->setPrefix($this->fieldType->getPrefix());
 
+            $extension->unsetBlock();
+
+            /* @var BlockInterface $block */
+            if ($item['block'] && $block = $blocks->find($item['block'])) {
+                $extension->setBlock($block);
+            }
+
             $form = $type->form(
                 $field,
                 $extension,
                 $item['instance']
             );
 
+            /* @var BlockFormBuilder $block */
             if ($item['block'] && $block = $form->getChildForm('block')) {
                 $block->setEntry($item['block']);
             }

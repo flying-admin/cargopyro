@@ -11,7 +11,7 @@ return array(
     'StringTemplate\\Test' => array($vendorDir . '/nicmart/string-template/tests'),
     'StringTemplate' => array($vendorDir . '/nicmart/string-template/src'),
     'SimplePie' => array($vendorDir . '/simplepie/simplepie/library'),
-    'Roumen\\Sitemap' => array($vendorDir . '/roumen/sitemap/src'),
+    'Roumen\\Sitemap' => array($vendorDir . '/roumen/sitemap/src', $baseDir . '/core/anomaly/sitemap-extension/vendor/roumen/sitemap/src'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'PhpSpec' => array($vendorDir . '/phpspec/phpspec/src'),
     'ParsedownExtra' => array($vendorDir . '/erusev/parsedown-extra'),

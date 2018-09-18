@@ -11,7 +11,7 @@
                     {{ post.publish_at.format(config_get('streams::datetime.date_format')) }}
                 </time>
             </p>
-            <p class="title">{{ post.title }}</p>
+            <h3 class="title">{{ post.title }}</h3>
             <div class="text">
                 {% if post.summary %}
                     <p>{{ post.summary|nl2br|raw }}</p>

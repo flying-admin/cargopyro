@@ -1,13 +1,13 @@
 
 <div class="news-slider">
     <div class="news-slider__wrap" >
-        <p class="news-slider__wrap__title"> {{ trans('theme::news.news') }}</p>
+        <h1 class="news-slider__wrap__title"> {{ trans('theme::news.news') }}</h1>
 
         {% for post in highlights %}
         <div class="news-slider__wrap__text">
-            <p class="title">
+            <h2 class="title">
                 {{ post.title }}
-            </p>
+            </h2>
             <p class="date">
                 <time class="date" datetime="{{ post.publish_at.iso }}">
                     {{ post.publish_at.format(config_get('streams::datetime.date_format')) }}

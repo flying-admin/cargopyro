@@ -30,6 +30,7 @@
     font-size: 50px;
     line-height: 55px;
     color: $secondary;
+    text-transform: uppercase;
     margin-bottom: 50px;
     @include media("<phablet") {
       font-size: 33px;
