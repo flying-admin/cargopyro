@@ -30,8 +30,12 @@
 {{ favicons("theme::images/favicon/favicon.png") }}
 
 {# Theme Styles #}
-{{ asset_add("app.css", "theme::scss/stylesheets.scss", ["min"]) }}
-{{ asset_style("app.css", ["min"]) }}
+ {{ asset_add("app.css", "theme::scss/stylesheets.scss", ["min"]) }}
+ {#  asset_style("app.css", ["min", "watch@theme::scss"]) #}
+{# Descomentar para compilar sass #}
+
+
+{{  asset_style("app.css", ["min"])  }}
 
 {{ template.includes.render('head')|raw }}
 

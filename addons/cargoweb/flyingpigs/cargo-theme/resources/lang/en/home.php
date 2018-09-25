@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'intro_title' => 'CARGO SERVICES, TRANSPORTATION AND LOGISTICS SERVICES',
+    'intro_text_1' => 'At Cargo Services, we offer a tailor-made comprehensive logistics service for transporting all types of merchandise from and to any point in the world.',
+    'intro_text_2' => 'Our main objective is to always be prepared to offer the best service that caters to the needs of the market and our clients.',
+
     'intro_slide_title'=>'THE MEANS OF TRANSPORT THAT IS THE',
     'intro_slide_1_title'=>'CHEAPEST',
     'intro_slide_2_title'=>'FASTEST AND SAFEST',
@@ -27,7 +31,7 @@ return [
 
     'form_title'=>'SERVICES',
     'form_subtitle'=>'TRANSPORT ENGINEERING',
-    'form_text'=>'At Cargo Services, we offer a tailor-made comprehensive logistics service for transporting all types of merchandise from and to any point in the world.',
+    'form_text'=>'At Cargo Services we work hand in hand with our clients so that their merchandise always reach their destination in the best possible way and within the specified timeframe.',
     'form_more'=>'See a list of all our services',
 
     'form_intro'=>'REQUEST',

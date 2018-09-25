@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'intro_title' => 'Cargo Services, transporte de mercancías y logística',
+    'intro_text_1' => 'En Cargo Services ofrecemos un servicio a medida de logística integral para el transporte de todo tipo de mercancías desde y hasta cualquier punto del mundo.',
+    'intro_text_2' => 'Nuestro objetivo principal es estar siempre preparados para dar el mejor servicio a las necesidades que el mercado y nuestros clientes puedan demandar.',
+
     'intro_slide_title'=>'EL MEDIO DE TRANSPORTE',
     'intro_slide_1_title'=>'MÁS ECONÓMICO',
     'intro_slide_2_title'=>'MÁS RÁPIDO Y MÁS SEGURO',
@@ -24,7 +28,9 @@ return [
     'content_slide_4_text'=>'Velamos por un desarrollo sostenible y un uso racional de los recursos naturales',
     'form_title'=>'SERVICIOS',
     'form_subtitle'=>'LA INGENIERÍA DEL TRANSPORTE',
-    'form_text'=>'En Cargo Services ofrecemos un servicio a medida de logística integral para el transporte de todo tipo de mercancías desde y hasta cualquier punto del mundo.',
+
+    'form_text'=>'En Cargo Services trabajamos de la mano de nuestros clientes para que sus mercancías alcancen siempre su destino de la mejor manera posible y en el plazo indicado.',
+
     'form_more'=>'Ver todos nuestros servicios',
     'form_intro'=>'SOLICITA',
     'form_intro_1'=>'PRESUPUESTO GRATUITO',

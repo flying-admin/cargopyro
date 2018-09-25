@@ -77,3 +77,13 @@ $(window).on("scroll", function () {
     header.removeClass('header--sticky');
   }
 });
+$(function(){
+    $(".js-accept-cookies").on("click", function () {
+        $('.js-cookie-consent-block').fadeOut();
+        Cookies.set("userCookieConsent", 1, {expires: 365, path: "/"});
+    });
+
+    if( !Cookies.get("userCookieConsent") ){
+        $('.js-cookie-consent-block').fadeIn();
+    }
+});

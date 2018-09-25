@@ -20,12 +20,12 @@
 
       {% include "theme::partials/header" %}
 
-    <div class="content__wrapper">
-
+    <div class="content__wrapper" >
       {% include "theme::partials/messages" %}
-      {% block content %}{% endblock %}
-    </div>
 
+        {% block content %}{% endblock %}
+
+    </div>
       {% include "theme::partials/footer" %}
 
     </div>
@@ -113,9 +113,17 @@
                 {{ form.close|raw }}
             </div>
           </div>
+
         </div>
       </div>
     </div>
+  <!-- cookie consent -->
+  <div class="cookie-consent cookie-consent-block js-cookie-consent-block" style="display: none;">
+      <p class="text-right"><span type="button" class="js-accept-cookies close "></span></p>
+      <p>{{  trans('theme::cookies.text_1')  }}</p>
+      <p> {{  trans('theme::cookies.text_2')  }}  <a href="{{ url_to(  trans('theme::route.cookies') ) }}" class="link"> {{  trans('theme::cookies.button')  }}</a></p>
+  </div>
+  <!-- ./cookie consent -->
   </body>
 </html>
 {% endhtmlcompress %}

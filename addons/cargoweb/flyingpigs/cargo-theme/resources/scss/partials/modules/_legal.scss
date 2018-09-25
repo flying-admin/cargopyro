@@ -14,6 +14,7 @@
     line-height: 15px;
     font-weight: 900;
     color: $corporative;
+
     @include media("<phablet") {
       right: 20px;
     }
@@ -24,29 +25,107 @@
       top: 2px;
     }
   }
-  &__title {
-    font-family: $font_title;
-    font-size: 50px;
-    line-height: 55px;
-    color: $secondary;
-    margin-bottom: 40px;
-    @include media("<phablet") {
-      font-size: 33px;
-      line-height: 47px;
-    }
+  h1{
+    font-family: "Anton", sans-serif;
+    font-size: 70px;
+    line-height: 80px;
+    color: #012140;
+    text-transform: uppercase;
+    margin-bottom: 45px;
   }
-  &__content {
-    p {
+  h2, h3 {
+    font-family: "Anton", sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    color: #083d6f;
+    text-transform: uppercase;
+    margin: 30px 0 ;
+    &.small{
       font-size: 16px;
       line-height: 26px;
-      margin-bottom: 10px;
       color: $darkgrey;
-      &.lead {
-        color: $secondary;
-        font-weight: 900;
-        padding-top: 30px;
-        margin-bottom: 18px;
-      }
+      padding-bottom: 10px;
+      font-weight: 900;
+      color: $black;
+      padding-bottom: 15px;
+      margin: 25px 0 0px;
+    }
+  }
+ h4{
+   font-size: 16px;
+   color: #083d6f;
+   line-height: 26px;
+   text-transform: uppercase;
+   margin-bottom: 15px;
+   font-weight: 900;
+ }
+
+  p,li {
+    font-size: 16px;
+    line-height: 26px;
+    color: #6d6d6d;
+    padding-bottom: 10px;
+    strong{
+      color: $black;
+    }
+  }
+
+  li{
+    padding-bottom: 5px;
+    list-style-type: disc;
+    list-style-position: outside;
+  }
+  ul{
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+
+}
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 30px 30px 40px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.22);
+  z-index: 9999;
+
+.text-right{
+    text-align: right;
+  }
+  p{
+    font-size: 16px;
+    line-height: 26px;
+    color: #6d6d6d;
+    padding-bottom: 10px;
+  }
+  .close{
+    position: relative;
+    height: 34px;
+    width: 34px;
+    display: inline-block;
+    cursor: pointer;
+
+    &:after,&:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(50% - 3px);
+      height: 5px;
+      border-radius: 3px;
+      background-color: #083d6f;
+    }
+    &:before{
+      transform: rotate(-45deg);
+
+    }
+    &:after{
+      transform: rotate(45deg);
     }
   }
 }

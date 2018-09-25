@@ -8,4 +8,5 @@ return [
     'news' => 'news',
     'privacy-policy' => 'privacy-policy',
     'legal-notice' =>'legal-notice',
+    'cookies' => 'cookie-policy',
 ];

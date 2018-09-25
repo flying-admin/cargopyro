@@ -121,6 +121,3 @@ if(Request::segment(0)=='en'){
     Route::get('/noticias', function(){return redirect('/en/news');});
 }
 
-
-
-

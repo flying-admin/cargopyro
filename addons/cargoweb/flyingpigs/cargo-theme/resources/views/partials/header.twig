@@ -5,7 +5,7 @@
         <ul class="lang-mobile">
             {% if app.locale  ==  'en' %}
               <li>
-                <a href="/{{ page.translation_url }}" class="">ES</a>
+                <a href="/{{ str_replace("_","-",page.translation_url) }}" class="">ES</a>
               </li>
                 <li> <span>/</span> </li>
               <li>
@@ -17,7 +17,7 @@
               </li>
               <li> <span>/</span> </li>
               <li>
-                <a href="/en/{{ page.translation_url }}" class="">EN</a>
+                <a href="/en/{{ str_replace("_","-",page.translation_url) }}" class="">EN</a>
               </li>
             {% endif %}
         </ul>
@@ -128,7 +128,7 @@
                 {% elseif 'posts' in app.request.pathinfo  %}
                   <a href="{{ app.request.requestUri }}" class="">ES</a>
                 {%  elseif   page.translation_url | length != 0 %}
-                  <a href="/{{ page.translation_url }}" class="">ES</a>
+                  <a href="/{{ str_replace("_","-",page.translation_url) }}" class="">ES</a>
                 {% else %}
                   <a href="/" class="">ES</a>
                 {% endif  %}
@@ -146,7 +146,7 @@
                 {% elseif 'posts' in app.request.pathinfo  %}
                   <a href="/en{{ app.request.requestUri }}" class="">EN</a>
                 {%  elseif   page.translation_url | length != 0 %}
-                  <a href="/en/{{ page.translation_url }}" class="">EN</a>
+                  <a href="/en/{{ str_replace("_","-",page.translation_url) }}" class="">EN</a>
                 {% else %}
                   <a href="/en" class="">EN</a>
                 {% endif %}
