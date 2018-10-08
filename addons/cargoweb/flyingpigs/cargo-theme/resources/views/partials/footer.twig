@@ -1,6 +1,6 @@
 <footer class="footer ">
   <!-- <div class="content__wrapper"> -->
-<div class="footer__content">
+    <div class="footer__content">
 
       <p>© Grupo Cargo Services</p>
       <ul class="footer__content__nav">
@@ -15,11 +15,11 @@
         </li>
       </ul>
 
-  </div>
+    </div>
     <div class="footer__social">
       <ul>
           <li>
-              <a href="https://www.facebook.com/sharer/sharer.php?u={{ app.request.uri }}" target="_blank">
+              <a href="https://www.facebook.com/sharer/sharer.php?u={% if app.request.uri is defined %} {{ app.request.uri }} {% else %} {{ url() }} {% endif %}" target="_blank">
                   <span class="icon icon-facebook"></span>
               </a>
           </li>

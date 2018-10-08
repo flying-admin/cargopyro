@@ -1,16 +1,26 @@
 .error {
   min-height: calc(100vh - 80px);
-  padding: 50px 0;
+  padding: 0px 0 50px;
   text-align: center;
   color: $white;
   background-color: $corporative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   @include media("<phablet") {
     min-height: calc(100vh - 71px);
-    padding: 20px 0;
+  }
+  &__logo {
+    width: 100%;
+    background-color: $white;
+    text-align: left;
+    margin-bottom: 50px;
+    img{
+      min-width: 95px;
+      width: 13vw;
+      margin: 15px;
+    }
   }
   .icon {
     font-size: 296px;
