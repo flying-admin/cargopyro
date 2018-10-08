@@ -10,12 +10,8 @@
     {% set highlights = entries('posts').whereCategoryId(category.id).recent().take(1).get()   %}  {# post with categorie news #}
 
     {% if highlights|length == 0 %}
-
-            {% set  highlights = posts | slice(0, 1 ) %} {# last post #}
-
+      {% set  highlights = posts | slice(0, 1 ) %} {# last post #}
     {% endif %}
-
-
 
     {% include "anomaly.module.posts::posts/partials/highlights" with {"posts": highlights } %}
 
@@ -205,9 +201,8 @@
             </div>
         </div>
 
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYC_HIH5QDJ0hX9EV3KGuiN360v8X01oo&callback=initMap"></script>
-        <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYC_HIH5QDJ0hX9EV3KGuiN360v8X01oo"></script> -->
-
+        <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYC_HIH5QDJ0hX9EV3KGuiN360v8X01oo&callback=initMap"></script> -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYC_HIH5QDJ0hX9EV3KGuiN360v8X01oo"></script>
 
     </div>
 

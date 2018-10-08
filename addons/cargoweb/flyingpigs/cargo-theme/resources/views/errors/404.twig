@@ -16,24 +16,19 @@
         {% include "theme::partials/assets" %}
     </head>
     <body>
-    <div class="body-wrapper">
-
-        {% include "theme::partials/header" %}
-
+    <div class="body-wrapper" style="padding:0px;">
         <div class="content__wrapper">
             <div class="error ">
                 <span class="icon icon-truck"></span>
                 <p class="title">
                     Error 404
                 </p>
-                <a  href="{{ url_to( trans('theme::route.home') ) }}" class="btn btn--primary" >
-                    Volver a la home
+                <a  href="{{ url_to( trans('theme::route.home') ) }}"  class="btn btn--primary" >
+                    {{ trans('theme::error.text') }}
                 </a>
             </div>
         </div>
-
         {% include "theme::partials/footer" %}
-
     </div>
     </body>
     </html>

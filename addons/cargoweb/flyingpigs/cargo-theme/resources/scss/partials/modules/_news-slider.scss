@@ -74,6 +74,7 @@
       @include media("<tablet") {
         width: 100%;
         position: relative;
+        height: auto;
       }
       .swiper-container {
         .swiper-wrapper {

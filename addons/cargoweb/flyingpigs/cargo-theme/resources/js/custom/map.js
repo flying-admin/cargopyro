@@ -4,6 +4,8 @@ $(function(){
   // Clusters Docs: https://htmlpreview.github.io/?https://github.com/googlemaps/v3-utility-library/blob/master/markerclustererplus/docs/reference.html
 
   if ( $('.map').length > 0 ) {
+    initMap();
+
     // google.maps.event.addDomListener(window, 'load', initMap);
   }
 

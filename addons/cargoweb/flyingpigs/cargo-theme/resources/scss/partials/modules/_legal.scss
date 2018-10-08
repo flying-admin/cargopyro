@@ -41,12 +41,13 @@
     color: #083d6f;
     text-transform: uppercase;
     margin: 30px 0 ;
+
     &.small{
       font-size: 16px;
       line-height: 26px;
       color: $darkgrey;
       padding-bottom: 10px;
-      font-weight: 900;
+      font-weight: 400;
       color: $black;
       padding-bottom: 15px;
       margin: 25px 0 0px;
@@ -91,7 +92,7 @@
   background-color: #fff;
   padding: 30px 30px 40px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.22);
-  z-index: 9999;
+  z-index: 999;
 
 .text-right{
     text-align: right;

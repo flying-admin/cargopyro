@@ -61,6 +61,15 @@ img {
       width: 100%;
     }
   }
+  
+
+  &.link--light{
+    color: $white;
+    &:after{
+      background-color: $white;
+    }
+  }
+  
 }
 
 /* ========== HELPERS ========== */

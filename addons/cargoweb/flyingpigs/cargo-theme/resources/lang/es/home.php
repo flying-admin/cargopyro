@@ -9,9 +9,14 @@ return [
     'intro_slide_1_title'=>'MÁS ECONÓMICO',
     'intro_slide_2_title'=>'MÁS RÁPIDO Y MÁS SEGURO',
     'intro_slide_3_title'=>'MÁS ADAPTABLE A TUS NECESIDADES',
-    'intro_slide_1_button'=>'Transporte marítimo',
-    'intro_slide_2_button'=>'Transporte aéreo',
-    'intro_slide_3_button'=>'Transporte terrestre',
+
+    'intro_slide_1_link'=>'Ver transporte marítimo',
+    'intro_slide_2_link'=>'Ver transporte aéreo',
+    'intro_slide_3_link'=>'Ver transporte terrestre',
+
+    'intro_slide_1_button'=>'Transporte <br>marítimo',
+    'intro_slide_2_button'=>'Transporte <br>aéreo',
+    'intro_slide_3_button'=>'Transporte <br>terrestre',
     'intro_slide_more'=>'Más información',
     'content_title'=>'30 AÑOS',
     'content_subtitle'=>'CUMPLIENDO CON TUS COMPROMISOS',

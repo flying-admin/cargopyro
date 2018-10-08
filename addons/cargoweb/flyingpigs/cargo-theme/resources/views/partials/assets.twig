@@ -4,16 +4,22 @@
 {{ asset_add("app.js", "theme::js/custom/*") }}
 {{ asset_add("app.js", "theme::js/all.js") }}
 
-{{ asset_script("app.js", ["min"]) }}
+{# asset_script("app.js", ["min", "watch@theme::js"]) #}
+{{ asset_script("app.js", ["min"], ['async', 'defer']) }}
+
 
 {# Include Scripts Loaded From Outside #}
-{% for script in asset_scripts("scripts.js") %}
-    {{ script|raw }}
-{% endfor %}
+{#
+  {% for script in asset_scripts("scripts.js") %}
+      {{ script|raw }}
+  {% endfor %}
+#}
 
 {# Include Styles Loaded From Outside #}
-{% for style in asset_styles("styles.css") %}
-    {{ style|raw }}
-{% endfor %}
+{#
+  {% for style in asset_styles("styles.css") %}
+      {{ style|raw }}
+  {% endfor %}
+#}
 
 {{ template.includes.render('scripts')|raw }}

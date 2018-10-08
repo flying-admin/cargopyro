@@ -10,25 +10,24 @@
         <p class="article__title">{{ post.title }}</p>
         <div class="article__image ">
             {% if post.post_image %}
-                {{ post.post_image.make.class("article__image__image")|raw }}
+              {{ post.post_image.make.class("article__image__image")|raw }}
             {% endif %}
 
-
             <p class="article__image__text">
-               {% if post.post_cite |length != 0 %}
-                   “{{ post.post_cite }}”
-                {% endif %}
+              {% if post.post_cite |length != 0 %}
+                “{{ post.post_cite }}”
+              {% endif %}
             </p>
         </div>
         <p class="article__date">
-            <time class="date" datetime="{{ post.publish_at.iso }}">
-                {{ post.publish_at.format(config_get('streams::datetime.date_format')) }}
-            </time>
+          <time class="date" datetime="{{ post.publish_at.iso }}">
+            {{ post.publish_at.format(config_get('streams::datetime.date_format')) }}
+          </time>
         </p>
         <div class="article__text">
-            {% block post %}
-                {{ content|raw }}
-            {% endblock %}
+          {% block post %}
+            {{ content|raw }}
+          {% endblock %}
         </div>
         <div class="article__social">
             <ul>
@@ -38,17 +37,17 @@
               </span>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ app.request.uri }}" >
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ app.request.uri }}" target="_blank">
                         <span class="icon icon-facebook"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/home?status={{ app.request.uri }}">
+                    <a href="https://twitter.com/home?status={{ app.request.uri }}" target="_blank">
                         <span class="icon icon-twitter"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://plus.google.com/share?url={{ app.request.uri }}">
+                    <a href="https://plus.google.com/share?url={{ app.request.uri }}" target="_blank">
                         <span class="icon icon-gplus"></span>
                     </a>
                 </li>
@@ -59,6 +58,16 @@
     {% set last_posts = entries('posts').recent().take(3).get() %}
     {% include "anomaly.module.posts::posts/partials/last-posts" with {"posts": last_posts} %}
 
+    <script type="text/javascript">
+      var menuItem = document.querySelectorAll('[data-news]')[0];
+      var klass = 'active';
+      if (!menuItem.classList.contains(klass)){
+        menuItem.classList.add(klass);
+        var menuLink = menuItem.querySelectorAll('a')[0];
+        var menuText = menuLink.textContent;
+        menuLink.innerHTML = '';
+        menuLink.innerHTML = '<h1>' + menuText + '</h1>';
+      }
+    </script>
+
 {% endblock %}
-
-

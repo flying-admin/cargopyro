@@ -28,6 +28,7 @@ class PagesController extends PublicController
     public function view(PageResolver $resolver, ViewTemplate $template)
     {
         if (!$page = $resolver->resolve()) {
+
             abort(404);
         }
 

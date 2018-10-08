@@ -163,9 +163,8 @@
         <li class="{%  if trans('theme::route.company') == page.slug %} active  {% endif %} ">
           <a href="{{ url_to( trans('theme::route.company') ) }} ">{%  if trans('theme::route.company') == page.slug %} <h1>  {% endif %}{{ trans('theme::header.Empresa') }}{%  if trans('theme::route.company') == page.slug %} </h1>  {% endif %}</a>
         </li>
-        <li class="{%  if  trans('theme::route.news') ==  app.request.requestUri |replace({'/': ""}) %} active  {% endif %} ">
-          <a href="{{ url_to( trans('theme::route.news') ) }} ">{%  if  trans('theme::route.news') ==  app.request.requestUri |replace({'/': ""}) %}<h1>{% endif %}{{ trans('theme::header.Noticias') }}{%  if  trans('theme::route.news') ==  app.request.requestUri |replace({'/': ""}) %}</h1>  {% endif %}
-          </a>
+        <li class="{%  if  trans('theme::route.news') ==  app.request.requestUri |replace({'/': ""}) %} active  {% endif %} " data-news>
+          <a href="{{ url_to( trans('theme::route.news') ) }} ">{%  if  trans('theme::route.news') ==  app.request.requestUri |replace({'/': ""}) %}<h1>{% endif %}{{ trans('theme::header.Noticias') }}{%  if  trans('theme::route.news') ==  app.request.requestUri |replace({'/': ""}) %}</h1>  {% endif %}</a>
         </li>
         <li class="{%  if trans('theme::route.contact') == page.slug %} active  {% endif %} ">
           <a href="{{ url_to( trans('theme::route.contact') ) }}">{%  if trans('theme::route.contact') == page.slug %} <h1> {% endif %} {{ trans('theme::header.Contacto') }}{%  if trans('theme::route.contact') == page.slug %} </h1>  {% endif %} </a>

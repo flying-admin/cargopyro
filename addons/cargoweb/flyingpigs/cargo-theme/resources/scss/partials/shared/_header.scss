@@ -292,7 +292,7 @@
     }
     ul {
       li {
-        a {
+        a , h1{
           display: block;
           width: 100%;
           font-family: $font_title;
@@ -304,6 +304,20 @@
           text-decoration: none;
           padding: 0;
           border-top: 1px solid rgba($white, 0.2);
+        }
+        h1 {
+          border-top: none;
+          position: relative;
+          &:after{
+            content: '';
+            width: 30px;
+            height: 2px;
+            background-color: $white;
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            transition: all 0.5s;
+          }
         }
         .btn {
           margin-left: -30px;

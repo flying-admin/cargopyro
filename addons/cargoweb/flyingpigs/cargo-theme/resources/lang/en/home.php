@@ -9,10 +9,15 @@ return [
     'intro_slide_1_title'=>'CHEAPEST',
     'intro_slide_2_title'=>'FASTEST AND SAFEST',
     'intro_slide_3_title'=>'MOST ADAPTABLE TO YOUR NEEDS',
-    'intro_slide_1_button'=>'SEA FREIGHT',
-    'intro_slide_2_button'=>'AIR FREIGHT',
+
+    'intro_slide_1_link'=>'See sea freight',
+    'intro_slide_2_link'=>'See air freight',
+    'intro_slide_3_link'=>'See land freight',
+    
+    'intro_slide_1_button'=>'SEA <br> FREIGHT',
+    'intro_slide_2_button'=>'AIR <br>FREIGHT',
     'intro_slide_3_button'=>'LAND FREIGHT',
-    'intro_slide_more'=>'More information',
+    'intro_slide_more'=>'More <br>information',
 
     'content_title'=>'30 YEARS',
     'content_subtitle'=>'MEETING YOUR COMMITMENTS',

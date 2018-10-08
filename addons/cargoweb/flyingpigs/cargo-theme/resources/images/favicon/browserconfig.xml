@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square70x70logo src="/app/cargoweb/assets/addons/cargoweb/flyingpigs/cargo-theme/resources/images/favicon/mstile-70x70.png"/>
+            <square150x150logo src="/app/cargoweb/assets/addons/cargoweb/flyingpigs/cargo-theme/resources/images/favicon/mstile-150x150.png"/>
+            <square310x310logo src="/app/cargoweb/assets/addons/cargoweb/flyingpigs/cargo-theme/resources/images/favicon/mstile-310x310.png"/>
+            <wide310x150logo src="/app/cargoweb/assets/addons/cargoweb/flyingpigs/cargo-theme/resources/images/favicon/mstile-310x150.png"/>
+            <TileColor>#012140</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>
